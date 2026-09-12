@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scroll-pt-24">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1160,18 +1160,18 @@
     }
 
     function switchHeroCanister(index) {
-      const item = PRODUCTS_DATA[index];
-      if (!item) return;
-      const visual = document.getElementById('heroCanisterVisual');
-      const name = document.getElementById('heroCanisterName');
-      const subtitle = document.getElementById('heroCanisterSubtitle');
-      const tagline = document.getElementById('heroCanisterTagline');
+  const item = PRODUCTS_DATA[index];
+  if (!item) return;
+  const visual = document.getElementById('heroCanisterVisual');
+  const name = document.getElementById('heroCanisterName');
+  const subtitle = document.getElementById('heroCanisterSubtitle');
+  const tagline = document.getElementById('heroCanisterTagline');
 
-      if (visual) visual.style.background = item.color;
-      if (name) name.textContent = item.name.split('—')[0].trim();
-      if (subtitle) subtitle.textContent = item.subtitle;
-      if (tagline) tagline.textContent = item.tagline;
-    }
+  if (visual) visual.style.background = item.gradient || item.color;
+  if (name) name.textContent = item.name.split('—')[0].trim();
+  if (subtitle) subtitle.textContent = item.subtitle;
+  if (tagline) tagline.textContent = item.tagline;
+}
 
     function setBundleTarget(size) {
       bundleTarget = size;
