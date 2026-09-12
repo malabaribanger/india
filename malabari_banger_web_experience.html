@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MALABARI BANGER™ | Authentic Calicut Snacks Fried in Pure Coconut Oil</title>
+  <meta name="description" content="Inspired by the purity and heritage of Kerala's finest food traditions. 8 signature airtight keepsake canisters featuring Wayanad Nendran banana chips, jackfruit chips, achappam, and Calicut mixtures.">
+
+  <!-- Google Fonts: Inter for crisp legibility, Playfair & Cinzel for heritage Kerala typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Malayalam:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              forest: '#0D281E',
+              forestDark: '#071A13',
+              forestMedium: '#14382B',
+              cream: '#FAF7F0',
+              creamLight: '#FFFFFF',
+              creamWarm: '#F3EDE0',
+              creamCard: '#FDFBF7',
+              gold: '#C59B3F',
+              goldLight: '#E2C279',
+              goldHover: '#AD832B',
+              crimson: '#8E1E14',
+              charcoal: '#1C211E',
+              sand: '#E5DCBE',
+              spiceOrange: '#D46324'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            malayalam: ['"Noto Serif Malayalam"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #FAF7F0; }
+    ::-webkit-scrollbar-thumb { background: #C59B3F; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #AD832B; }
+
+    .woodcut-vector {
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .badge-glow {
+      box-shadow: 0 2px 10px rgba(197, 155, 63, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal font-sans selection:bg-brand-gold selection:text-brand-forest antialiased">
+
+  <!-- Clean, Non-overlapping Top Utility Bar -->
+  <aside aria-label="Brand Guarantee" class="w-full bg-brand-forestDark text-brand-cream text-[11px] border-b border-brand-gold/20 py-2.5 px-4 sm:px-6 relative z-30">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      
+      <!-- Left: Regional Provenance -->
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse"></span>
+        <span class="font-malayalam text-[11px] text-brand-gold font-bold shrink-0">നാടൻ രുചി</span>
+        <span class="text-brand-cream/80 truncate text-[10px] sm:text-[11px]">• 100% PURE KERALA COCONUT OIL • BATCH-FRIED IN CALICUT</span>
+      </div>
+
+      <!-- Right: Commercial & Gifting Links -->
+      <div class="flex items-center gap-3 shrink-0 text-[10px] sm:text-[11px] text-brand-cream/85">
+        <span class="hidden md:inline text-brand-cream/70">Free Pan-India Delivery on 3+ Tins</span>
+        <button type="button" onclick="openModal('cateringModal')" class="cursor-pointer text-brand-gold hover:text-white transition font-medium flex items-center gap-1">
+          <span>Weddings & Corporate Favours</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Clean, Solid Main Header with Verified Zero Vertical Overlap -->
+  <header class="w-full bg-brand-forest text-brand-cream sticky top-0 z-40 border-b border-brand-gold/20 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      
+      <!-- Verified Brand Logo with Kerala Coconut Palm Emblem -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 cursor-pointer" aria-label="Malabari Banger Home">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-brand-forestDark flex items-center justify-center border border-brand-gold/40 group-hover:border-brand-gold transition shadow-sm shrink-0">
+          <!-- Precise Malabar Coconut Palm Vector -->
+          <svg viewBox="0 0 60 60" class="w-5 h-5 sm:w-6 sm:h-6 fill-brand-gold" aria-hidden="true">
+            <path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/>
+            <path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5 18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0 18 4 22 11-7 0-14 1-18 6"/>
+          </svg>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <div class="flex items-center gap-1 leading-none">
+            <span class="font-serif text-base sm:text-xl font-bold tracking-wider text-white">
+              MALABARI <span class="text-brand-gold">BANGER</span>
+            </span>
+            <span class="text-[8px] sm:text-[9px] font-sans font-bold text-brand-gold/80">TM</span>
+          </div>
+          <div class="flex items-center gap-1.5 mt-1">
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-brand-sand/80 font-sans font-semibold leading-none">
+              Snacks That Hit Different
+            </span>
+            <span class="hidden sm:inline text-brand-gold text-[7px] leading-none">• CALICUT</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-semibold uppercase tracking-wider text-brand-cream/80" aria-label="Main Navigation">
+        <a href="#products" class="hover:text-brand-gold transition-colors">Our 8 Canisters</a>
+        <a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+          <span>Curate Box</span>
+          <span class="bg-brand-crimson text-white text-[8px] px-1.5 py-0.5 rounded font-bold">Offer</span>
+        </a>
+        <a href="#purity" class="hover:text-brand-gold transition-colors">Purity Standard</a>
+        <a href="#pairings" class="hover:text-brand-gold transition-colors">Tea Pairings</a>
+        <a href="#heritage" class="hover:text-brand-gold transition-colors">Calicut Roots</a>
+        <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Cart Action & Call to Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        
+        <!-- Banger Box / Cart Pill Button -->
+        <button type="button" id="cartToggleBtn" onclick="toggleCartDrawer(true)" class="cursor-pointer bg-brand-forestDark hover:bg-brand-forestDark/80 text-brand-cream border border-brand-gold/30 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full flex items-center gap-1.5 sm:gap-2 transition group shadow-sm active:scale-95" aria-label="Open shopping cart">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-gold group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider">Banger Box</span>
+          <span id="cartCountBadge" class="bg-brand-gold text-brand-forest font-black text-[9px] sm:text-[10px] w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Taste The Banger / Explore Canisters Button -->
+        <a href="#products" class="cursor-pointer hidden sm:inline-flex items-center justify-center bg-brand-gold hover:bg-brand-goldHover text-brand-forest font-bold text-[10px] sm:text-[11px] uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition shadow-sm active:scale-95">
+          Taste The Banger
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" id="mobileMenuBtn" onclick="toggleMobileNav()" class="cursor-pointer lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-lg border border-brand-gold/30 text-brand-gold hover:bg-brand-forestDark focus:outline-none focus:ring-1 focus:ring-brand-gold transition active:scale-95" aria-label="Toggle navigation menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-forestDark border-t border-brand-gold/20 px-6 py-4 space-y-3">
+      <a href="#products" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">The 8 Canisters Collection</a>
+      <a href="#box-builder" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-gold">Curate Custom Box (3 or 6 Tins)</a>
+      <a href="#purity" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">100% Coconut Oil & Purity</a>
+      <a href="#pairings" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">Malabar Tea Pairings</a>
+      <a href="#heritage" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">Calicut Heritage & Roots</a>
+      <a href="#faq" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">FAQ</a>
+      <div class="pt-2 border-t border-brand-gold/20">
+        <button type="button" onclick="openModal('cateringModal'); toggleMobileNav();" class="cursor-pointer w-full text-center py-2.5 bg-brand-gold hover:bg-brand-goldHover text-brand-forest rounded-full text-xs uppercase tracking-widest font-bold transition">
+          Weddings & Gifting Enquiries
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fresh, Natural Hero Section (Clean Warm Parchment & Kerala Palms) -->
+    <section class="relative bg-gradient-to-b from-brand-creamLight via-brand-cream to-brand-creamWarm border-b border-brand-sand pt-8 pb-14 lg:py-16 overflow-hidden">
+      
+      <!-- Subtle Decorative Woodcut Palm Vector in Background -->
+      <div class="absolute -right-16 -top-10 opacity-[0.06] pointer-events-none w-96 h-96">
+        <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-forest">
+          <path d="M48 94 L52 94 L51 45 C51 45 61 48 69 44 C77 40 79 30 79 30 C79 30 71 32 65 36 C59 40 51 43 51 43 C51 43 57 36 67 31 C77 26 81 15 81 15 C81 15 71 17 63 23 C55 29 50 39 50 39 C50 39 49 28 54 20 C59 12 55 2 55 2 C55 2 48 8 46 16 C44 24 49 39 49 39 C49 39 45 28 39 21 C33 14 22 13 22 13 C22 13 26 23 34 29 C42 35 48 42 48 42 C48 42 41 38 33 34 C25 30 17 31 17 31 C17 31 22 40 31 43 C40 46 48 44 48 44 Z" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Hero Narrative: Clean, Trustworthy & Culturally Grounded -->
+          <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-forest/5 border border-brand-forest/15 text-brand-forest text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+              <span>Traditional Flavours. Bolder Tomorrows.</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-5xl font-bold leading-tight tracking-tight text-brand-forest">
+              THE GOLDEN CRUNCH OF CALICUT. <br />
+              <span class="italic font-normal text-brand-gold">SEALED FOR THE WORLD.</span>
+            </h1>
+
+            <div class="flex items-center justify-center lg:justify-start gap-2 text-brand-forest/80 text-xs font-malayalam">
+              <span class="font-bold">കോഴിക്കോടൻ തനത് രുചി</span>
+              <span>•</span>
+              <span class="font-sans text-[11px] uppercase tracking-widest text-brand-charcoal/70">Wayanad Nendran • Cold-Pressed Copra Oil</span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-brand-charcoal/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+              Thin-sliced Wayanad raw Nendran bananas, batch-crisped in cold-pressed Kerala coconut oil and locked into airtight keepsake canisters. Authentic Malabar food culture made crisp, natural, and preservative-free.
+            </p>
+
+            <!-- 3 Clean FMCG Value Pillars (Inspired by Nirapara Purity Seals) -->
+            <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+              <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">100% Pure Oil</span>
+                <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Cold-pressed copra</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">Wayanad GI Tag</span>
+                <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Raw Nendran harvest</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">6-Month Crisp</span>
+                <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Nitrogen foil seal</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-row items-center justify-center lg:justify-start gap-3 pt-3">
+              <a href="#products" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full shadow transition text-center">
+                View 8 Canisters
+              </a>
+              <a href="#box-builder" class="bg-white border border-brand-forest/20 hover:border-brand-gold text-brand-forest text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full transition shadow-sm flex items-center gap-1.5">
+                <span>Curate Custom Box</span>
+                <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Hero Canister Showcase Card (Clean, Natural, High-Contrast) -->
+          <div class="lg:col-span-5 relative flex flex-col items-center">
+            <div class="w-full max-w-sm bg-white border border-brand-sand rounded-3xl p-5 shadow-lg relative">
+              
+              <!-- Provenance Tag -->
+              <div class="flex justify-between items-center pb-3 border-b border-brand-sand">
+                <span class="text-xs uppercase tracking-widest text-brand-forest font-bold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                  Crafted in Calicut
+                </span>
+                <span class="text-[10px] uppercase tracking-wider bg-brand-forest text-brand-cream px-2 py-0.5 rounded-full font-bold">200g Keepsake Tin</span>
+              </div>
+
+              <!-- Interactive Hero Canister Graphic -->
+              <div class="my-5 flex flex-col items-center justify-center text-center">
+                <div id="heroCanisterVisual" class="w-44 h-64 rounded-2xl p-3.5 flex flex-col justify-between items-center shadow-md relative transition-all duration-500 border border-brand-gold/40 text-white" style="background: linear-gradient(145deg, #0E2B1F, #174834);">
+                  
+                  <div class="w-full flex justify-between items-center text-[8px] uppercase tracking-widest text-brand-gold border-b border-brand-gold/20 pb-1">
+                    <span>MALABAR</span>
+                    <span>CALICUT</span>
+                  </div>
+
+                  <div class="text-center my-auto">
+                    <div class="w-7 h-7 mx-auto mb-1 flex items-center justify-center">
+                      <svg viewBox="0 0 60 60" class="w-6 h-6 fill-brand-gold"><path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/><path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5 18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0 18 4 22 11-7 0-14 1-18 6"/></svg>
+                    </div>
+                    <div class="font-serif text-xs font-bold text-white tracking-wide leading-none">MALABARI BANGER</div>
+                    <div class="text-[7px] tracking-widest text-brand-gold uppercase mt-0.5">SNACKS THAT HIT DIFFERENT</div>
+                  </div>
+
+                  <div class="w-full p-2 bg-black/30 backdrop-blur-sm rounded-lg border border-brand-gold/20 text-center">
+                    <p id="heroCanisterName" class="text-[11px] font-serif font-bold text-white uppercase tracking-wide">KERALA BANANA CHIPS</p>
+                    <p id="heroCanisterSubtitle" class="text-[9px] text-brand-gold font-sans uppercase tracking-widest font-semibold">CLASSIC SALT</p>
+                  </div>
+
+                  <div class="w-full flex items-center justify-between pt-1 border-t border-brand-gold/20 text-[7px] text-brand-sand">
+                    <span id="heroCanisterTagline" class="italic">Thin. Crispy. Unforgettable.</span>
+                    <span class="text-brand-gold font-bold uppercase">100% COCONUT OIL</span>
+                  </div>
+                </div>
+
+                <!-- Flavour Selector Dots -->
+                <div class="flex items-center gap-2.5 mt-4">
+                  <span class="text-[10px] text-brand-charcoal/70 uppercase tracking-widest font-semibold">Switch Flavour:</span>
+                  <button onclick="switchHeroCanister(0)" class="w-4 h-4 rounded-full bg-emerald-900 border-2 border-brand-gold/60 focus:ring-2 ring-brand-gold" title="Classic Salt"></button>
+                  <button onclick="switchHeroCanister(1)" class="w-4 h-4 rounded-full bg-red-900 border-2 border-brand-gold/60 focus:ring-2 ring-brand-gold" title="Spicy Pepper"></button>
+                  <button onclick="switchHeroCanister(2)" class="w-4 h-4 rounded-full bg-amber-800 border-2 border-brand-gold/60 focus:ring-2 ring-brand-gold" title="Jackfruit Crunch"></button>
+                  <button onclick="switchHeroCanister(3)" class="w-4 h-4 rounded-full bg-blue-900 border-2 border-brand-gold/60 focus:ring-2 ring-brand-gold" title="Malabar Mixture"></button>
+                  <button onclick="switchHeroCanister(5)" class="w-4 h-4 rounded-full bg-purple-950 border-2 border-brand-gold/60 focus:ring-2 ring-brand-gold" title="Achappam"></button>
+                </div>
+              </div>
+
+              <!-- Quick Add Bar -->
+              <div class="pt-3 border-t border-brand-sand flex justify-between items-center">
+                <div>
+                  <span class="text-[10px] text-brand-charcoal/60 block uppercase font-medium">Single Canister (200g)</span>
+                  <span class="text-base font-bold font-serif text-brand-forest">₹199 <span class="text-xs font-normal text-brand-charcoal/50 line-through">₹249</span></span>
+                </div>
+                <button onclick="addToCart('mb-01')" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-sm">
+                  + Add to Cart
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- The Malabar Purity Standard (Natural Ingredients & Traditional Cookware) -->
+    <section class="py-14 sm:py-16 bg-white border-b border-brand-sand" id="purity">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center justify-center gap-2 mb-2">
+            <span class="h-px w-8 bg-brand-gold"></span>
+            <span class="text-xs uppercase tracking-[0.25em] text-brand-forest font-bold">The Purity Standard</span>
+            <span class="h-px w-8 bg-brand-gold"></span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">Farm-Fresh Malabar Ingredients</h2>
+          <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-2 font-light max-w-xl mx-auto">
+            Just like traditional Kerala kitchens, we never cut corners with palmolein or synthetic flavor enhancers. Pure agricultural treasure from Kerala soil.
+          </p>
+        </div>
+
+        <!-- 4 Agricultural & Culinary Heritage Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-brand-creamCard p-6 rounded-2xl border border-brand-sand shadow-sm hover:border-brand-gold transition duration-300">
+            <div class="w-12 h-12 rounded-full bg-brand-forest/5 border border-brand-gold/40 flex items-center justify-center text-brand-forest mb-4">
+              <!-- Copra & Coconut Woodcut -->
+              <svg viewBox="0 0 100 100" class="w-8 h-8 stroke-current text-brand-forest woodcut-vector">
+                <circle cx="50" cy="50" r="38" stroke-width="3"/>
+                <path d="M50,12 C60,25 65,40 65,50 C65,60 60,75 50,88" stroke-width="2"/>
+                <circle cx="40" cy="38" r="4" fill="currentColor"/>
+                <circle cx="58" cy="38" r="4" fill="currentColor"/>
+                <circle cx="49" cy="54" r="4" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-base font-bold text-brand-forest mb-1">Cold-Pressed Copra Oil</h3>
+            <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              Extracted from sun-dried Kerala copra in traditional wooden *chakkus*. Rich in healthy MCFAs and naturally aromatic.
+            </p>
+            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">100% Pure • No Palmolein</span>
+          </div>
+
+          <div class="bg-brand-creamCard p-6 rounded-2xl border border-brand-sand shadow-sm hover:border-brand-gold transition duration-300">
+            <div class="w-12 h-12 rounded-full bg-brand-forest/5 border border-brand-gold/40 flex items-center justify-center text-brand-forest mb-4">
+              <!-- Wayanad Nendran Bunch Woodcut -->
+              <svg viewBox="0 0 100 100" class="w-8 h-8 stroke-current text-brand-forest woodcut-vector">
+                <path d="M50,15 L50,30 M30,35 C38,45 60,45 68,35 M22,48 C35,62 65,62 76,48 M30,62 C40,74 58,74 68,62 M45,75 C48,84 52,84 55,75" stroke-width="3"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-base font-bold text-brand-forest mb-1">Wayanad Nendran Bananas</h3>
+            <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              Harvested at exact raw starch density from hill-tract farms. Sliced paper-thin for quintessential Calicut shatter.
+            </p>
+            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">GI-Tagged Harvest</span>
+          </div>
+
+          <div class="bg-brand-creamCard p-6 rounded-2xl border border-brand-sand shadow-sm hover:border-brand-gold transition duration-300">
+            <div class="w-12 h-12 rounded-full bg-brand-forest/5 border border-brand-gold/40 flex items-center justify-center text-brand-forest mb-4">
+              <!-- Tellicherry Black Pepper Woodcut -->
+              <svg viewBox="0 0 100 100" class="w-8 h-8 stroke-current text-brand-forest woodcut-vector">
+                <path d="M50,15 Q65,40 50,85 M50,30 Q35,40 38,48 M50,55 Q68,65 65,75" stroke-width="3"/>
+                <circle cx="48" cy="38" r="3.5" fill="currentColor"/>
+                <circle cx="53" cy="46" r="3.5" fill="currentColor"/>
+                <circle cx="47" cy="54" r="3.5" fill="currentColor"/>
+                <circle cx="52" cy="62" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-base font-bold text-brand-forest mb-1">Tellicherry Black Pepper</h3>
+            <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              The historic black gold of the Malabar Coast. Sun-cured whole peppercorns stone-crushed over hot crisps for fiery aroma.
+            </p>
+            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">Ancient Spice Route</span>
+          </div>
+
+          <div class="bg-brand-creamCard p-6 rounded-2xl border border-brand-sand shadow-sm hover:border-brand-gold transition duration-300">
+            <div class="w-12 h-12 rounded-full bg-brand-forest/5 border border-brand-gold/40 flex items-center justify-center text-brand-forest mb-4">
+              <!-- Bronze Uruli Vessel Woodcut -->
+              <svg viewBox="0 0 100 100" class="w-8 h-8 stroke-current text-brand-forest woodcut-vector">
+                <ellipse cx="50" cy="45" rx="38" ry="12" stroke-width="3"/>
+                <path d="M12,45 C15,75 85,75 88,45" stroke-width="3"/>
+                <path d="M5,42 Q0,45 6,52 Q12,50 12,45 M95,42 Q100,45 94,52 Q88,50 88,45" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-base font-bold text-brand-forest mb-1">Bell-Metal Uruli Frying</h3>
+            <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              Batch-crisped in heavy bronze vessels that maintain uniform heat distribution, preventing oil absorption.
+            </p>
+            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">Artisanal Mastery</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- The 8 Signature Canisters Range -->
+    <section class="py-16 sm:py-20 bg-brand-creamWarm border-b border-brand-sand" id="products">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Category Tabs -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-5">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-1">Authentic Calicut Catalogue</span>
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">The 8 Malabari Bangers</h2>
+            <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-1 max-w-xl font-light">
+              Sealed in airtight aluminium canisters with nitrogen-flushed freshness to preserve first-second crispness.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs (Nirapara Range Navigation Style) -->
+          <div class="flex flex-wrap gap-2" id="filterTabs">
+            <button onclick="filterProducts('all')" class="filter-tab active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-forest text-brand-cream transition shadow-sm">All 8 Tins</button>
+            <button onclick="filterProducts('banana')" class="filter-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-brand-sand text-brand-forest hover:border-brand-gold transition">Banana Crisps</button>
+            <button onclick="filterProducts('heritage')" class="filter-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-brand-sand text-brand-forest hover:border-brand-gold transition">Heritage Sweets</button>
+            <button onclick="filterProducts('spicy')" class="filter-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-brand-sand text-brand-forest hover:border-brand-gold transition">Spiced & Savoury</button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid (Clean, High-Key, Food-Grade Presentation) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="productsGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Box Banner Prompt -->
+        <div class="mt-12 p-6 sm:p-7 bg-brand-forest text-brand-cream rounded-3xl border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-lg">
+          <div class="text-center sm:text-left">
+            <h4 class="font-serif text-base sm:text-lg font-bold text-brand-gold">Building a gift bundle for friends, Onam, or celebrations?</h4>
+            <p class="text-xs text-brand-cream/80 mt-0.5">Combine any 3 or 6 canisters in a custom gold-embossed Calicut gift box with free delivery.</p>
+          </div>
+          <a href="#box-builder" class="bg-brand-gold hover:bg-brand-goldHover text-brand-forest font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition shadow flex-shrink-0">
+            Curate Gift Box &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Box Builder: Malabar Trio (3) & Grand Feast (6) -->
+    <section class="py-16 sm:py-20 bg-white border-b border-brand-sand" id="box-builder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-1">Custom Keepsake Packaging</span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">Curate Your Banger Box</h2>
+          <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-1.5 font-light">
+            Select your bundle tier and tap any canister below to fill your slots. Packed in a signature gold-embossed Calicut gift box.
+          </p>
+
+          <!-- Bundle Size Switcher -->
+          <div class="inline-flex p-1 bg-brand-creamWarm rounded-full mt-6 border border-brand-sand shadow-inner">
+            <button id="bundleTab3" onclick="setBundleTarget(3)" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-forest text-brand-cream transition shadow">
+              The Malabar Trio (3 Tins) — ₹549
+            </button>
+            <button id="bundleTab6" onclick="setBundleTarget(6)" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-forest hover:text-brand-gold transition">
+              The Grand Feast (6 Tins) — ₹999
+            </button>
+          </div>
+        </div>
+
+        <!-- Box Visualizer Panel -->
+        <div class="bg-brand-creamCard p-6 sm:p-8 rounded-3xl border border-brand-sand shadow-md max-w-5xl mx-auto mb-8">
+          
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-5 border-b border-brand-sand">
+            <div>
+              <span class="text-xs uppercase tracking-widest font-bold text-brand-forest block">Your Custom Box Configuration</span>
+              <span id="boxStatusText" class="text-xs text-brand-charcoal/70">Tap canisters below to fill slot (0 of 3 selected)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span id="boxSavingsBadge" class="text-[11px] font-bold uppercase px-3 py-1 bg-brand-crimson text-white rounded-full">Save ₹78</span>
+              <button id="addBundleBtn" onclick="addBundleToCart()" disabled class="opacity-50 cursor-not-allowed bg-brand-forest text-brand-cream font-bold text-xs uppercase tracking-widest px-6 py-2.5 rounded-full transition shadow">
+                Add Complete Box to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Slots Grid -->
+          <div id="bundleSlotsGrid" class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 my-6">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Canister Pickers -->
+          <div class="pt-4 border-t border-brand-sand">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-forest block mb-3">Choose Canisters to Add:</span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2" id="bundlePickerButtons">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Malabar Tea Table Pairings (Culinary Culture) -->
+    <section class="py-16 bg-brand-creamWarm border-b border-brand-sand" id="pairings">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-1">From the Malabar Tea Table</span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">Authentic Pairings & Tea Traditions</h2>
+          <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-1.5 font-light">
+            In Kozhikode, an evening tea without a savoury or sweet crunch is unthinkable. Here is how Calicut locals pair each canister.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-brand-forest/5 flex items-center justify-center text-brand-gold mb-3 font-serif font-bold text-base">01</div>
+              <h3 class="font-serif text-lg font-bold text-brand-forest mb-1">Classic Salt + South Beach Sulaimani</h3>
+              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                The subtle sea-salt crunch of cold-pressed coconut oil banana chips cuts effortlessly through the sweet lemon and clove aroma of Calicut's piping hot black tea.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand text-[11px] font-semibold text-brand-gold uppercase">
+              Best For: Sunset Ocean Walks
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-brand-forest/5 flex items-center justify-center text-brand-gold mb-3 font-serif font-bold text-base">02</div>
+              <h3 class="font-serif text-lg font-bold text-brand-forest mb-1">Tellicherry Pepper + Cardamom Milk Chai</h3>
+              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                The slow heat of crushed Tellicherry peppercorns and fried coastal curry leaves creates a fiery balance with creamy, cardamom-spiced Kerala milk tea.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand text-[11px] font-semibold text-brand-gold uppercase">
+              Best For: Monsoon Afternoons
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-brand-forest/5 flex items-center justify-center text-brand-gold mb-3 font-serif font-bold text-base">03</div>
+              <h3 class="font-serif text-lg font-bold text-brand-forest mb-1">Achappam + Filter Coffee & Festivals</h3>
+              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                Fragrant with fresh coconut milk, black sesame, and cardamom, the traditional rosette *achappam* cookie dissolves delicately with roasted South Indian filter coffee.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand text-[11px] font-semibold text-brand-gold uppercase">
+              Best For: Family Celebrations
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Calicut Roots & Cultural Narrative -->
+    <section class="py-16 sm:py-20 bg-brand-forest text-brand-cream relative overflow-hidden" id="heritage">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-widest">
+              <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+              <span>Roots & Provenance</span>
+            </div>
+
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold leading-tight">
+              Calicut Is Not Just A Place.<br />
+              <span class="italic font-normal text-brand-gold">It Is A Living Standard Of Hospitality.</span>
+            </h2>
+
+            <p class="text-brand-cream/80 text-xs sm:text-sm font-light leading-relaxed">
+              For centuries, the ancient port of Kozhikode welcomed Arab dhows, Chinese junks, and Portuguese navigators seeking the finest black pepper, dry ginger, and coconuts in the known world. Down the bustling spice alleyways of Valiyangadi and the evening tea stalls of South Beach, food is an unspoken act of warmth.
+            </p>
+
+            <p class="text-brand-cream/70 text-xs sm:text-sm font-light leading-relaxed">
+              MALABARI BANGER was created to honor this living food heritage. We reject modern palmolein shortcuts, artificial flavour dust, and flimsy plastic packets. By marrying ancient bronze uruli batch frying with airtight aluminium canisters, we ensure that whether you open a tin in Calicut, Bengaluru, Dubai, or London, you experience genuine first-second crunch.
+            </p>
+
+            <div class="pt-3 grid grid-cols-3 gap-4 border-t border-brand-gold/20 text-xs text-brand-goldLight">
+              <div>
+                <span class="text-lg font-bold font-serif text-white block">100%</span>
+                <span class="text-[10px] text-brand-cream/70">Pure Coconut Oil</span>
+              </div>
+              <div>
+                <span class="text-lg font-bold font-serif text-white block">Zero</span>
+                <span class="text-[10px] text-brand-cream/70">Palmolein or Chemicals</span>
+              </div>
+              <div>
+                <span class="text-lg font-bold font-serif text-white block">6 Months</span>
+                <span class="text-[10px] text-brand-cream/70">Airtight Crispness</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cultural Quality Emblem -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm bg-brand-forestDark p-7 rounded-3xl border border-brand-gold/30 text-center shadow-2xl">
+              
+              <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-brand-forest border border-brand-gold/40 flex items-center justify-center">
+                <svg viewBox="0 0 60 60" class="w-8 h-8 fill-brand-gold">
+                  <path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/>
+                  <path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5 18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0 18 4 22 11-7 0-14 1-18 6"/>
+                </svg>
+              </div>
+
+              <span class="font-serif text-base font-bold text-brand-cream tracking-wide block">MALABARI BANGER™</span>
+              <span class="text-[10px] uppercase tracking-widest text-brand-gold block mt-0.5">CRAFTED IN CALICUT</span>
+              
+              <div class="w-12 h-px bg-brand-gold/30 mx-auto my-3"></div>
+
+              <p class="text-xs text-brand-cream/80 font-light leading-relaxed italic">
+                “Snack Bold. Live Malabari. From the coastal palm groves of Kerala to your table.”
+              </p>
+
+              <div class="mt-5 pt-3 border-t border-brand-gold/20 flex justify-between items-center text-[10px] text-brand-cream/60 uppercase tracking-wider">
+                <span>Batch No: MB-K07</span>
+                <span>FSSAI Certified</span>
+                <span>Wayanad GI Tag</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Reviews & Customer Endorsement -->
+    <section class="py-14 sm:py-16 bg-white border-b border-brand-sand" id="reviews">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-1">Verified Customer Reviews</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-forest tracking-tight">Caught in the Banger Era</h2>
+          <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-1 font-light">
+            Over 12,000 canisters shipped across India and the GCC. Here is what real snack lovers say.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-brand-creamCard p-5 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-xs mb-2">★★★★★</div>
+              <p class="text-xs text-brand-charcoal/85 italic leading-relaxed">
+                “The classic salt banana chips are paper-thin and not soaked in greasy palm oil. You can genuinely smell the fresh cold-pressed coconut oil the moment the foil seal opens.”
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-brand-forest block">Arjun Varma</span>
+                <span class="text-[10px] text-brand-charcoal/60">Bengaluru • Verified Order</span>
+              </div>
+              <span class="text-[9px] uppercase font-bold text-brand-forest bg-brand-creamWarm px-2 py-0.5 rounded">Classic Salt</span>
+            </div>
+          </div>
+
+          <div class="bg-brand-creamCard p-5 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-xs mb-2">★★★★★</div>
+              <p class="text-xs text-brand-charcoal/85 italic leading-relaxed">
+                “Ordered the 6-canister Grand Feast box for family in Dubai. The spicy pepper chips and achappam were finished in one sitting. The airtight tin packaging looks super premium.”
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-brand-forest block">Devika Menon</span>
+                <span class="text-[10px] text-brand-charcoal/60">Dubai, UAE • Expat Order</span>
+              </div>
+              <span class="text-[9px] uppercase font-bold text-brand-forest bg-brand-creamWarm px-2 py-0.5 rounded">Achappam & Pepper</span>
+            </div>
+          </div>
+
+          <div class="bg-brand-creamCard p-5 rounded-2xl border border-brand-sand shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-500 text-xs mb-2">★★★★★</div>
+              <p class="text-xs text-brand-charcoal/85 italic leading-relaxed">
+                “Finding good Varikka chakka crisps that aren't bitter is rare. These jackfruit chips are golden, sweet, and stay crunchy for months in the tin.”
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-brand-forest block">Faisal K.</span>
+                <span class="text-[10px] text-brand-charcoal/60">Kozhikode • Local Customer</span>
+              </div>
+              <span class="text-[9px] uppercase font-bold text-brand-forest bg-brand-creamWarm px-2 py-0.5 rounded">Jackfruit Crunch</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-14 sm:py-16 bg-brand-creamWarm border-b border-brand-sand" id="faq">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center mb-8">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-1">Everything You Need to Know</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-forest tracking-tight">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-3" id="faqAccordion">
+          
+          <div class="bg-white rounded-xl border border-brand-sand overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(0)" class="w-full px-5 py-4 text-left flex justify-between items-center text-xs sm:text-sm font-bold text-brand-forest hover:text-brand-gold transition">
+              <span>Why are Malabari Banger chips fried exclusively in 100% coconut oil?</span>
+              <span class="faq-icon text-brand-gold font-serif text-lg font-bold">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-brand-charcoal/80 leading-relaxed border-t border-brand-sand/50 pt-2">
+              Traditional Malabar snacks derive their legendary flavour from cold-pressed copra oil. Most commercial brands use cheap palmolein or seed oils to reduce costs. We use 100% pure Kerala copra oil, rich in healthy MCFAs and naturally resistant to oxidation, delivering authentic aroma and superior crispness.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-brand-sand overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(1)" class="w-full px-5 py-4 text-left flex justify-between items-center text-xs sm:text-sm font-bold text-brand-forest hover:text-brand-gold transition">
+              <span>How does the airtight canister keep the chips crisp for 6 months?</span>
+              <span class="faq-icon text-brand-gold font-serif text-lg font-bold">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-brand-charcoal/80 leading-relaxed border-t border-brand-sand/50 pt-2">
+              Moisture and air are the primary enemies of fried banana crisps. Our aluminium cylinders feature food-grade nitrogen flushing and a foil pull-tab seal. Until opened, no ambient humidity penetrates the tin, preserving fresh-from-the-uruli crispness for 6 months.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-brand-sand overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(2)" class="w-full px-5 py-4 text-left flex justify-between items-center text-xs sm:text-sm font-bold text-brand-forest hover:text-brand-gold transition">
+              <span>Where do you source your Nendran bananas?</span>
+              <span class="faq-icon text-brand-gold font-serif text-lg font-bold">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-brand-charcoal/80 leading-relaxed border-t border-brand-sand/50 pt-2">
+              We source directly from farmer collectives across the Wayanad hill tract. Wayanadan Nendran has a certified GI (Geographical Indication) status, prized for dense starch content, vibrant natural yellow hue, and optimal chip firmness.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-brand-sand overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(3)" class="w-full px-5 py-4 text-left flex justify-between items-center text-xs sm:text-sm font-bold text-brand-forest hover:text-brand-gold transition">
+              <span>Do you ship internationally to the GCC, UK, and US?</span>
+              <span class="faq-icon text-brand-gold font-serif text-lg font-bold">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-brand-charcoal/80 leading-relaxed border-t border-brand-sand/50 pt-2">
+              Yes! Because our canisters are vacuum-sealed and rigid, they survive air cargo without crushing. We fulfill international bulk and individual gift parcels worldwide via DHL Express.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean, Authoritative Brand Footer (Nirapara & Kitchen Treasures Structure) -->
+  <footer class="bg-brand-forestDark text-brand-cream border-t border-brand-gold/20 pt-14 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-brand-gold/20">
+        
+        <!-- Brand Summary -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-forest border border-brand-gold/40 flex items-center justify-center">
+              <svg viewBox="0 0 60 60" class="w-5 h-5 fill-brand-gold"><path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/><path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5 18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0 18 4 22 11-7 0-14 1-18 6"/></svg>
+            </div>
+            <span class="font-serif text-lg font-bold tracking-wider text-brand-cream">MALABARI BANGER™</span>
+          </div>
+          <p class="text-xs text-brand-cream/70 max-w-sm font-light leading-relaxed">
+            Reclaiming the golden crunch of Calicut. Handcrafted in Kerala, fried in cold-pressed copra oil, sealed in airtight canisters for snack lovers worldwide.
+          </p>
+          <div class="text-[11px] text-brand-gold">
+            <span>Production Hub: [BUSINESS ADDRESS: Beach Road / Valiyangadi, Calicut, Kerala 673001]</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-gold block mb-3">Quick Navigation</span>
+          <ul class="space-y-2 text-xs text-brand-cream/70">
+            <li><a href="#products" class="hover:text-brand-gold transition">Our 8 Canisters</a></li>
+            <li><a href="#box-builder" class="hover:text-brand-gold transition">Curate Custom Box</a></li>
+            <li><a href="#purity" class="hover:text-brand-gold transition">100% Coconut Oil Purity</a></li>
+            <li><a href="#pairings" class="hover:text-brand-gold transition">Malabar Tea Pairings</a></li>
+            <li><a href="#heritage" class="hover:text-brand-gold transition">Calicut Heritage</a></li>
+            <li><button onclick="openModal('cateringModal')" class="hover:text-brand-gold transition">Weddings & Bulk Gifting</button></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Certifications -->
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-gold block mb-3">Customer Desk</span>
+          <div class="space-y-1.5 text-xs text-brand-cream/70 font-light">
+            <p>Customer Support: [PHONE: +91 98460 XXXXX]</p>
+            <p>Direct Email: [hello@malabaribanger.com]</p>
+            <p>FSSAI Lic: [113XXXXXXXXXXX]</p>
+            <div class="pt-2">
+              <span class="px-2.5 py-1 rounded bg-brand-forest border border-brand-gold/30 text-[10px] text-brand-gold">Instagram @malabaribanger</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-brand-cream/50 gap-3">
+        <span>&copy; 2026 MALABARI BANGER™. All Rights Reserved. Crafted in Calicut.</span>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Shipping Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Interactive Slide-Out Cart Drawer -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" aria-modal="true" role="dialog">
+    <!-- Semi-transparent backdrop -->
+    <div onclick="toggleCartDrawer(false)" class="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-pointer transition-opacity duration-300"></div>
+    <div class="absolute inset-y-0 right-0 max-w-full flex pl-10 z-10">
+      <div class="w-screen max-w-md bg-white text-brand-charcoal border-l border-brand-sand flex flex-col justify-between shadow-2xl">
+        
+        <!-- Cart Header -->
+        <div class="p-5 border-b border-brand-sand flex justify-between items-center bg-brand-cream">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="font-serif text-base font-bold tracking-wider text-brand-forest">Your Banger Cart</span>
+          </div>
+          <button type="button" onclick="toggleCartDrawer(false)" class="cursor-pointer text-brand-charcoal/60 hover:text-brand-forest p-1" aria-label="Close cart">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Free Delivery Progress Tracker -->
+        <div class="px-5 py-3 bg-brand-creamWarm border-b border-brand-sand text-xs">
+          <div class="flex justify-between items-center mb-1.5">
+            <span id="shippingProgressText" class="text-brand-charcoal/80 text-[11px]">Add 3 canisters for Free Pan-India Delivery</span>
+            <span id="shippingProgressPercent" class="text-brand-forest font-bold">0%</span>
+          </div>
+          <div class="w-full h-1.5 bg-black/10 rounded-full overflow-hidden">
+            <div id="shippingProgressBar" class="h-full bg-emerald-600 transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Cart Items List -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-3" id="cartItemsContainer">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Cart Footer Checkout -->
+        <div class="p-5 border-t border-brand-sand bg-brand-cream space-y-3">
+          <div class="space-y-1 text-xs">
+            <div class="flex justify-between text-brand-charcoal/70">
+              <span>Subtotal</span>
+              <span id="cartSubtotal" class="font-bold text-brand-forest">₹0</span>
+            </div>
+            <div class="flex justify-between text-brand-charcoal/70">
+              <span>Pan-India Shipping</span>
+              <span id="cartShippingStatus" class="text-emerald-700 font-semibold">Calculated on quantity</span>
+            </div>
+            <div class="flex justify-between text-sm font-bold text-brand-forest pt-2 border-t border-brand-sand">
+              <span>Estimated Total</span>
+              <span id="cartTotal" class="text-base font-serif text-brand-forest">₹0</span>
+            </div>
+          </div>
+
+          <button type="button" onclick="checkoutViaWhatsApp()" class="cursor-pointer w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-widest py-3 rounded-full flex items-center justify-center gap-2 shadow-md transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.969.54 1.761.815 2.796.815 3.183 0 5.769-2.587 5.77-5.767 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.767c0 5.518-4.482 10-10 10-1.745 0-3.4-.45-4.856-1.246l-5.144 1.347 1.37-5.008c-.89-1.517-1.37-3.266-1.37-5.093 0-5.518 4.482-10 10-10 5.518 0 10 4.482 10 10z"/></svg>
+            <span>Order via Calicut WhatsApp Hub</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Quick-View Modal -->
+  <div id="productModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white text-brand-charcoal border border-brand-sand rounded-3xl max-w-lg w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal('productModal')" class="absolute top-4 right-4 text-brand-charcoal/60 hover:text-brand-forest" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div id="modalProductContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Weddings & Corporate Gifting Modal -->
+  <div id="cateringModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white text-brand-charcoal border border-brand-sand rounded-3xl max-w-md w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal('cateringModal')" class="absolute top-4 right-4 text-brand-charcoal/60 hover:text-brand-forest" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <h3 class="font-serif text-xl font-bold text-brand-forest mb-1">Weddings & Corporate Favours</h3>
+      <p class="text-xs text-brand-charcoal/70 mb-4">Custom engraved tins with personalized labels for auspicious celebrations and bulk export.</p>
+
+      <form onsubmit="handleCateringSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-brand-charcoal/80 mb-1 font-semibold">Your Full Name</label>
+          <input required type="text" id="catName" placeholder="e.g. Rahul Nambiar" class="w-full bg-brand-cream border border-brand-sand rounded-xl px-3.5 py-2.5 text-brand-charcoal focus:border-brand-forest focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-brand-charcoal/80 mb-1 font-semibold">Contact Phone / WhatsApp</label>
+          <input required type="tel" id="catPhone" placeholder="+91 98XXXXXXXX" class="w-full bg-brand-cream border border-brand-sand rounded-xl px-3.5 py-2.5 text-brand-charcoal focus:border-brand-forest focus:outline-none">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-brand-charcoal/80 mb-1 font-semibold">Event Date</label>
+            <input required type="date" id="catDate" class="w-full bg-brand-cream border border-brand-sand rounded-xl px-3 py-2 text-brand-charcoal focus:border-brand-forest focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-brand-charcoal/80 mb-1 font-semibold">Expected Tins</label>
+            <input required type="number" id="catQty" min="20" placeholder="Min 20 tins" class="w-full bg-brand-cream border border-brand-sand rounded-xl px-3 py-2 text-brand-charcoal focus:border-brand-forest focus:outline-none">
+          </div>
+        </div>
+        <div>
+          <label class="block text-brand-charcoal/80 mb-1 font-semibold">Special Request / Mix Requirements</label>
+          <textarea id="catNotes" rows="2" placeholder="Custom sleeve printing, specific canister mix..." class="w-full bg-brand-cream border border-brand-sand rounded-xl px-3 py-2 text-brand-charcoal focus:border-brand-forest focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brand-forest hover:bg-brand-forestMedium text-brand-cream font-bold text-xs uppercase tracking-widest py-3 rounded-full transition shadow mt-2">
+          Submit Gifting Request &rarr;
+        </button>
+      </form>
+      <p id="catSuccess" class="hidden text-emerald-700 text-xs text-center mt-3 font-semibold">
+        Request logged! Our Calicut gifting desk will reach out on WhatsApp within 2 hours.
+      </p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-forest text-brand-cream px-4 py-2.5 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span id="toastMsg">Canister added to box!</span>
+  </div>
+
+  <script>
+    const PRODUCTS_DATA = [
+      {
+        id: 'mb-01',
+        name: 'Kerala Banana Chips — Classic Salt',
+        subtitle: 'CLASSIC SALT',
+        category: 'banana',
+        price: 199,
+        weight: '200g',
+        rating: '4.9 (1,240+)',
+        spice: 'Zero',
+        crunch: '10/10',
+        color: '#0E2B1F',
+        badge: 'Thin & Crispy',
+        tagline: 'Thin. Crispy. Unforgettable.',
+        oil: '100% Pure Coconut Oil',
+        desc: 'Paper-thin sliced Wayanad raw Nendran bananas crisped in cold-pressed Kerala coconut oil, finished with crushed rock salt.',
+        ingredients: 'Raw Wayanad Nendran Bananas, 100% Cold-Pressed Kerala Coconut Oil, Rock Salt, Pure Turmeric.'
+      },
+      {
+        id: 'mb-02',
+        name: 'Kerala Banana Chips — Spicy Pepper',
+        subtitle: 'SPICY PEPPER',
+        category: 'banana spicy',
+        price: 219,
+        weight: '200g',
+        rating: '5.0 (980+)',
+        spice: 'High 🔥',
+        crunch: '10/10',
+        color: '#4A1212',
+        badge: 'Bolder Bite',
+        tagline: 'A Bolder Bite From Malabar.',
+        oil: 'Tellicherry Pepper Infused',
+        desc: 'Tossed in stone-crushed Tellicherry black peppercorns, roasted chilli flakes, and roasted coastal curry leaves.',
+        ingredients: 'Wayanad Nendran Bananas, 100% Coconut Oil, Tellicherry Black Pepper, Red Chilli Flakes, Curry Leaves, Salt.'
+      },
+      {
+        id: 'mb-03',
+        name: 'Jackfruit Chips — Tropical Crunch',
+        subtitle: 'TROPICAL CRUNCH',
+        category: 'banana heritage',
+        price: 239,
+        weight: '180g',
+        rating: '4.9 (740+)',
+        spice: 'Naturally Sweet',
+        crunch: '9/10',
+        color: '#3D3115',
+        badge: 'Rare Harvest',
+        tagline: "Nature's Sweetest Crunch.",
+        oil: 'Cold-Pressed Copra Oil',
+        desc: 'Ripe-firm Malabar Varikka Chakka strips crisped to an amber sheen. Deeply aromatic, rich in fiber, and nostalgically crisp.',
+        ingredients: 'Wild Kerala Varikka Jackfruit (Chakka), 100% Cold-Pressed Coconut Oil, Sea Salt.'
+      },
+      {
+        id: 'mb-04',
+        name: 'Malabar Mixture — Signature Blend',
+        subtitle: 'SIGNATURE BLEND',
+        category: 'spicy',
+        price: 189,
+        weight: '220g',
+        rating: '4.9 (1,850+)',
+        spice: 'Medium',
+        crunch: '10/10',
+        color: '#132847',
+        badge: 'Crowd Favourite',
+        tagline: 'A Taste of Tradition.',
+        oil: 'Fried Curry Leaves & Peanuts',
+        desc: 'Crunchy gram flour sev, roasted peanuts, golden garlic pods, and toasted curry leaves in Calicut beach spices.',
+        ingredients: 'Besan (Gram Flour), Peanuts, Fried Garlic, Roasted Curry Leaves, Malabar Spices, Pure Coconut Oil, Salt.'
+      },
+      {
+        id: 'mb-05',
+        name: 'Potato Chips — Malabar Masala',
+        subtitle: 'MALABAR MASALA',
+        category: 'spicy',
+        price: 179,
+        weight: '180g',
+        rating: '4.8 (610+)',
+        spice: 'Medium+',
+        crunch: '9/10',
+        color: '#422415',
+        badge: 'Crinkle Cut',
+        tagline: 'Classic Comfort. Malabar Twist.',
+        oil: 'Kettle Cooked',
+        desc: 'Ridged crinkle-cut potatoes dusted with stone-ground Malabar cinnamon, fennel, coriander, and Kashmiri chilli.',
+        ingredients: 'Farm Fresh Potatoes, 100% Coconut Oil, Malabar Garam Masala, Kashmiri Chilli, Turmeric, Salt.'
+      },
+      {
+        id: 'mb-06',
+        name: 'Achappam — Traditional Delight',
+        subtitle: 'TRADITIONAL DELIGHT',
+        category: 'heritage',
+        price: 209,
+        weight: '180g',
+        rating: '4.9 (880+)',
+        spice: 'Delicate Sweet',
+        crunch: '10/10',
+        color: '#3B1530',
+        badge: 'Rose Cookie',
+        tagline: 'Timeless Flavours. Newer Stories.',
+        oil: 'Fresh Coconut Milk Batter',
+        desc: 'Traditional rosette cookies cast in brass molds. Made with fresh coconut milk, roasted sesame, and ground cardamom.',
+        ingredients: 'Rice Flour, Fresh Coconut Milk, Cane Sugar, Black Sesame, Cardamom, Pure Coconut Oil.'
+      },
+      {
+        id: 'mb-07',
+        name: 'Koyalappam — Sweet & Crispy',
+        subtitle: 'SWEET & CRISPY',
+        category: 'heritage',
+        price: 199,
+        weight: '200g',
+        rating: '4.8 (490+)',
+        spice: 'Cumin Note',
+        crunch: '9/10',
+        color: '#0E363A',
+        badge: 'Village Classic',
+        tagline: 'A Malabar Classic. Always Special.',
+        oil: 'Shallot & Cumin Crisp',
+        desc: 'Crispy rolled tubes of roasted rice flour, infused with subtle shallot fragrance, toasted cumin seeds, and coconut fat.',
+        ingredients: 'Roasted Rice Flour, Shallots, Cumin Seeds, Subtle Jaggery, Coconut Oil, Sea Salt.'
+      },
+      {
+        id: 'mb-08',
+        name: 'Rice Crisps — Thattukada Style',
+        subtitle: 'THATTUKADA STYLE',
+        category: 'spicy',
+        price: 179,
+        weight: '150g',
+        rating: '4.8 (530+)',
+        spice: 'Medium',
+        crunch: '8/10',
+        color: '#4E2113',
+        badge: 'Beach Favorite',
+        tagline: 'Light. Crunchy. Truly Malabar.',
+        oil: 'Sun-Dried Rice Dough',
+        desc: 'Featherlight puffed rice crisps flash-fried with crushed beach garlic, slit green chillies, and coastal sea salt.',
+        ingredients: 'Sun-Dried Rice Starch, Crushed Garlic, Green Chillies, Curry Leaves, Pure Coconut Oil, Salt.'
+      }
+    ];
+
+    let cart = [];
+    let bundleTarget = 3;
+    let bundleSelection = [];
+
+    function renderProductsGrid(categoryFilter = 'all') {
+      const container = document.getElementById('productsGrid');
+      if (!container) return;
+
+      const filtered = categoryFilter === 'all' 
+        ? PRODUCTS_DATA 
+        : PRODUCTS_DATA.filter(p => p.category.includes(categoryFilter));
+
+      container.innerHTML = filtered.map(item => `
+        <article class="bg-white border border-brand-sand hover:border-brand-gold rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm group">
+          <div>
+            <!-- Canister Visual Container -->
+            <div class="h-52 rounded-xl p-3 flex flex-col justify-between items-center text-center relative overflow-hidden" style="background: linear-gradient(145deg, ${item.color}ee, ${item.color});">
+              <span class="self-end text-[9px] uppercase font-bold tracking-wider bg-black/40 text-brand-gold px-2 py-0.5 rounded border border-brand-gold/30">${item.badge}</span>
+              
+              <!-- Clean Canister Vector Mockup -->
+              <div class="w-24 h-32 rounded-xl border border-brand-gold/50 flex flex-col justify-between items-center p-2 text-center shadow-md bg-black/30 text-white">
+                <span class="text-[7px] text-brand-gold uppercase tracking-widest leading-none">MALABARI BANGER</span>
+                <svg viewBox="0 0 50 20" class="w-8 h-2.5 text-brand-gold/70 stroke-current woodcut-vector"><path stroke-width="1" d="M5,18 L45,18 M12,18 L16,4 L20,4 L24,18"/></svg>
+                <div>
+                  <span class="text-[8px] font-serif font-bold leading-tight block">${item.name.split('—')[0].replace('Kerala', '').trim()}</span>
+                  <span class="text-[7px] text-brand-sand uppercase block font-semibold">${item.subtitle}</span>
+                </div>
+                <span class="text-[6px] text-brand-gold uppercase leading-none font-bold">100% COCONUT OIL</span>
+              </div>
+              <p class="text-[11px] text-white/90 font-medium italic">“${item.tagline}”</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="mt-3.5">
+              <div class="flex items-center justify-between text-xs text-brand-forest mb-1">
+                <span class="font-semibold text-[11px] uppercase tracking-wider text-emerald-800">${item.oil}</span>
+                <span class="text-[11px] text-amber-600 font-semibold">★ ${item.rating}</span>
+              </div>
+              <h3 class="font-serif text-sm font-bold text-brand-forest group-hover:text-brand-gold transition-colors leading-snug">${item.name}</h3>
+              <p class="text-xs text-brand-charcoal/75 mt-1 font-light line-clamp-2 leading-relaxed">${item.desc}</p>
+              
+              <div class="mt-2.5 flex items-center gap-1.5 text-[10px] text-brand-charcoal/70">
+                <span class="px-2 py-0.5 bg-brand-cream rounded border border-brand-sand">Spice: ${item.spice}</span>
+                <span class="px-2 py-0.5 bg-brand-cream rounded border border-brand-sand">Crunch: ${item.crunch}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price & Actions -->
+          <div class="mt-4 pt-3 border-t border-brand-sand flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-brand-charcoal/60 block uppercase tracking-wider font-semibold">${item.weight} Tin</span>
+              <span class="text-sm sm:text-base font-bold font-serif text-brand-forest">₹${item.price}</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button onclick="openProductQuickView('${item.id}')" class="p-1.5 text-brand-charcoal/60 hover:text-brand-forest transition" title="View details">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              </button>
+              <button onclick="addToCart('${item.id}')" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider transition shadow-sm">
+                + Add
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function filterProducts(category) {
+      document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.classList.remove('bg-brand-forest', 'text-brand-cream', 'active', 'shadow-sm');
+        tab.classList.add('bg-white', 'text-brand-forest', 'border-brand-sand');
+      });
+      event.currentTarget.classList.remove('bg-white', 'border-brand-sand');
+      event.currentTarget.classList.add('bg-brand-forest', 'text-brand-cream', 'active', 'shadow-sm');
+      renderProductsGrid(category);
+    }
+
+    function switchHeroCanister(index) {
+      const item = PRODUCTS_DATA[index];
+      if (!item) return;
+      const visual = document.getElementById('heroCanisterVisual');
+      const name = document.getElementById('heroCanisterName');
+      const subtitle = document.getElementById('heroCanisterSubtitle');
+      const tagline = document.getElementById('heroCanisterTagline');
+
+      if (visual) visual.style.background = item.color;
+      if (name) name.textContent = item.name.split('—')[0].trim();
+      if (subtitle) subtitle.textContent = item.subtitle;
+      if (tagline) tagline.textContent = item.tagline;
+    }
+
+    function setBundleTarget(size) {
+      bundleTarget = size;
+      bundleSelection = [];
+      const tab3 = document.getElementById('bundleTab3');
+      const tab6 = document.getElementById('bundleTab6');
+      const savings = document.getElementById('boxSavingsBadge');
+
+      if (size === 3) {
+        tab3.className = "px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-forest text-brand-cream transition shadow";
+        tab6.className = "px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-forest hover:text-brand-gold transition";
+        savings.textContent = "Save ₹78";
+      } else {
+        tab6.className = "px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-forest text-brand-cream transition shadow";
+        tab3.className = "px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-brand-forest hover:text-brand-gold transition";
+        savings.textContent = "Save ₹245 + Free Shipping";
+      }
+      renderBundleSlots();
+    }
+
+    function renderBundleSlots() {
+      const slotsContainer = document.getElementById('bundleSlotsGrid');
+      const statusText = document.getElementById('boxStatusText');
+      const addBtn = document.getElementById('addBundleBtn');
+      if (!slotsContainer) return;
+
+      let html = '';
+      for (let i = 0; i < bundleTarget; i++) {
+        const item = bundleSelection[i];
+        if (item) {
+          html += `
+            <div class="h-28 rounded-2xl bg-white border-2 border-brand-gold p-2 flex flex-col justify-between items-center text-center relative shadow-sm">
+              <button onclick="removeBundleItem(${i})" class="absolute -top-1.5 -right-1.5 bg-brand-crimson text-white w-5 h-5 rounded-full text-[10px] flex items-center justify-center font-bold" title="Remove">✕</button>
+              <span class="text-[8px] font-bold text-brand-forest uppercase">Slot ${i + 1}</span>
+              <span class="text-[9px] font-serif font-bold text-brand-forest line-clamp-2">${item.subtitle}</span>
+              <span class="text-[8px] text-brand-charcoal/60">${item.weight}</span>
+            </div>
+          `;
+        } else {
+          html += `
+            <div class="h-28 rounded-2xl border-2 border-dashed border-brand-sand flex flex-col justify-center items-center p-2 text-center text-brand-charcoal/40 bg-brand-cream/50">
+              <span class="text-sm text-brand-gold font-bold">+</span>
+              <span class="text-[8px] uppercase font-bold mt-0.5">Empty Slot ${i + 1}</span>
+            </div>
+          `;
+        }
+      }
+      slotsContainer.innerHTML = html;
+
+      statusText.textContent = `Tap canisters below to fill slot (${bundleSelection.length} of ${bundleTarget} selected)`;
+
+      if (bundleSelection.length === bundleTarget) {
+        addBtn.disabled = false;
+        addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      } else {
+        addBtn.disabled = true;
+        addBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    function renderBundlePickerButtons() {
+      const container = document.getElementById('bundlePickerButtons');
+      if (!container) return;
+
+      container.innerHTML = PRODUCTS_DATA.map(p => `
+        <button onclick="addBundleItem('${p.id}')" class="p-2 bg-white hover:border-brand-gold border border-brand-sand rounded-xl text-center transition group shadow-sm">
+          <span class="text-[9px] font-bold text-brand-forest block leading-tight group-hover:text-brand-gold truncate">${p.subtitle}</span>
+          <span class="text-[8px] text-emerald-800 font-semibold mt-0.5 block">+ Add</span>
+        </button>
+      `).join('');
+    }
+
+    function addBundleItem(productId) {
+      if (bundleSelection.length >= bundleTarget) {
+        showToast(`Your ${bundleTarget}-tin box is already full!`);
+        return;
+      }
+      const item = PRODUCTS_DATA.find(p => p.id === productId);
+      if (item) {
+        bundleSelection.push(item);
+        renderBundleSlots();
+        showToast(`Added ${item.subtitle} to slot ${bundleSelection.length}`);
+      }
+    }
+
+    function removeBundleItem(index) {
+      bundleSelection.splice(index, 1);
+      renderBundleSlots();
+    }
+
+    function addBundleToCart() {
+      if (bundleSelection.length !== bundleTarget) return;
+
+      const bundlePrice = bundleTarget === 3 ? 549 : 999;
+      const bundleTitle = bundleTarget === 3 ? 'Malabar Trio Gift Box (3 Tins)' : 'The Grand Feast Box (6 Tins)';
+      const itemsList = bundleSelection.map(s => s.subtitle).join(', ');
+
+      const existingBundle = cart.find(c => c.isBundle && c.target === bundleTarget && c.itemsList === itemsList);
+      if (existingBundle) {
+        existingBundle.quantity += 1;
+      } else {
+        cart.push({
+          id: 'bundle-' + Date.now(),
+          name: bundleTitle,
+          price: bundlePrice,
+          quantity: 1,
+          isBundle: true,
+          target: bundleTarget,
+          itemsList: itemsList,
+          weight: bundleTarget === 3 ? '3 Canisters' : '6 Canisters'
+        });
+      }
+
+      bundleSelection = [];
+      renderBundleSlots();
+      updateCartUI();
+      toggleCartDrawer(true);
+      showToast('Custom Banger Box added to cart!');
+    }
+
+    function addToCart(productId) {
+      const product = PRODUCTS_DATA.find(p => p.id === productId);
+      if (!product) return;
+
+      const existing = cart.find(c => c.id === productId);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          subtitle: product.subtitle,
+          price: product.price,
+          weight: product.weight,
+          quantity: 1,
+          isBundle: false
+        });
+      }
+      updateCartUI();
+      showToast(`Added ${product.subtitle} to cart!`);
+    }
+
+    function updateCartQuantity(cartId, delta) {
+      const index = cart.findIndex(c => c.id === cartId);
+      if (index === -1) return;
+
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const countBadge = document.getElementById('cartCountBadge');
+      const itemsContainer = document.getElementById('cartItemsContainer');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const totalEl = document.getElementById('cartTotal');
+      const shippingStatus = document.getElementById('cartShippingStatus');
+      const progressBar = document.getElementById('shippingProgressBar');
+      const progressPercent = document.getElementById('shippingProgressPercent');
+      const progressText = document.getElementById('shippingProgressText');
+
+      const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+      countBadge.textContent = totalItems;
+
+      let subtotal = 0;
+      let totalCanisterCount = 0;
+
+      cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+        if (item.isBundle) {
+          totalCanisterCount += item.target * item.quantity;
+        } else {
+          totalCanisterCount += item.quantity;
+        }
+      });
+
+      // Free shipping on 3+ canisters
+      let shipping = totalCanisterCount >= 3 || totalCanisterCount === 0 ? 0 : 70;
+      let finalTotal = subtotal + shipping;
+
+      subtotalEl.textContent = `₹${subtotal}`;
+      totalEl.textContent = `₹${finalTotal}`;
+
+      if (totalCanisterCount >= 3) {
+        shippingStatus.textContent = 'FREE Pan-India Delivery';
+        shippingStatus.className = 'text-emerald-700 font-bold';
+        progressBar.style.width = '100%';
+        progressPercent.textContent = '100%';
+        progressText.textContent = '🎉 You unlocked Free Pan-India Shipping!';
+      } else {
+        const remaining = 3 - totalCanisterCount;
+        shippingStatus.textContent = `₹70 (Add ${remaining} more for FREE)`;
+        shippingStatus.className = 'text-brand-charcoal/70';
+        const percent = Math.round((totalCanisterCount / 3) * 100);
+        progressBar.style.width = `${percent}%`;
+        progressPercent.textContent = `${percent}%`;
+        progressText.textContent = `Add ${remaining} more canister${remaining > 1 ? 's' : ''} for FREE Delivery`;
+      }
+
+      if (cart.length === 0) {
+        itemsContainer.innerHTML = `
+          <div class="h-56 flex flex-col items-center justify-center text-center text-brand-charcoal/60 space-y-2">
+            <svg class="w-10 h-10 text-brand-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <p class="text-xs uppercase tracking-wider font-bold text-brand-forest">Your Banger Cart is Empty</p>
+            <p class="text-[11px] text-brand-charcoal/60">Select any canister or curate a bundle box.</p>
+          </div>
+        `;
+      } else {
+        itemsContainer.innerHTML = cart.map(item => `
+          <div class="bg-brand-creamCard p-3 rounded-2xl border border-brand-sand flex justify-between items-center shadow-sm">
+            <div class="space-y-0.5">
+              <h4 class="text-xs font-serif font-bold text-brand-forest">${item.name}</h4>
+              <p class="text-[10px] text-brand-charcoal/60">${item.isBundle ? item.itemsList : item.weight + ' Tin'}</p>
+              <span class="text-xs font-bold text-brand-forest">₹${item.price}</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-2 py-1 rounded-full border border-brand-sand">
+              <button onclick="updateCartQuantity('${item.id}', -1)" class="w-5 h-5 flex items-center justify-center text-brand-charcoal hover:text-brand-forest font-bold text-xs">-</button>
+              <span class="text-xs font-bold text-brand-forest w-4 text-center">${item.quantity}</span>
+              <button onclick="updateCartQuantity('${item.id}', 1)" class="w-5 h-5 flex items-center justify-center text-brand-charcoal hover:text-brand-forest font-bold text-xs">+</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      if (!drawer) return;
+      if (open) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        showToast('Please add items to your cart first.');
+        return;
+      }
+
+      let summary = "*MALABARI BANGER ORDER ENQUIRY*%0A";
+      summary += "--------------------------------%0A";
+      cart.forEach(item => {
+        summary += `• ${item.name} x ${item.quantity} = ₹${item.price * item.quantity}%0A`;
+        if (item.isBundle) {
+          summary += `  (Flavours: ${item.itemsList})%0A`;
+        }
+      });
+      summary += "--------------------------------%0A";
+
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+      summary += `*Estimated Subtotal:* ₹${subtotal}%0A`;
+      summary += "*Delivery Location:* [PLEASE ENTER YOUR CITY & PINCODE]%0A";
+      summary += "*Customer Name:* [PLEASE ENTER YOUR NAME]%0A%0A";
+      summary += "Please confirm availability and dispatch schedule from Calicut!";
+
+      const whatsappUrl = `https://wa.me/919846000000?text=${summary}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    function openProductQuickView(productId) {
+      const product = PRODUCTS_DATA.find(p => p.id === productId);
+      if (!product) return;
+
+      const content = document.getElementById('modalProductContent');
+      content.innerHTML = `
+        <div class="space-y-3.5">
+          <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-emerald-800 font-bold">
+            <span>Airtight Canister (${product.weight})</span>
+            <span>•</span>
+            <span>100% Coconut Oil</span>
+          </div>
+
+          <h3 class="font-serif text-xl font-bold text-brand-forest">${product.name}</h3>
+
+          <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">${product.desc}</p>
+
+          <div class="p-3 bg-brand-cream rounded-xl border border-brand-sand text-xs space-y-1">
+            <span class="font-bold text-brand-forest block uppercase text-[10px]">Ingredients:</span>
+            <p class="text-brand-charcoal/80 text-[11px]">${product.ingredients}</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-brand-creamCard border border-brand-sand">
+              <span class="text-[10px] text-brand-charcoal/60 block">Spice Heat Level</span>
+              <span class="font-bold text-brand-forest">${product.spice}</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-brand-creamCard border border-brand-sand">
+              <span class="text-[10px] text-brand-charcoal/60 block">Texture & Crunch</span>
+              <span class="font-bold text-brand-forest">${product.crunch}</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-brand-sand flex justify-between items-center">
+            <span class="text-xl font-serif font-bold text-brand-forest">₹${product.price}</span>
+            <button onclick="addToCart('${product.id}'); closeModal('productModal');" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full transition shadow">
+              Add To My Box
+            </button>
+          </div>
+        </div>
+      `;
+      openModal('productModal');
+    }
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobileMenu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function toggleFaq(index) {
+      const contents = document.querySelectorAll('.faq-content');
+      const icons = document.querySelectorAll('.faq-icon');
+      if (!contents[index]) return;
+
+      const isHidden = contents[index].classList.contains('hidden');
+      contents.forEach(c => c.classList.add('hidden'));
+      icons.forEach(i => i.textContent = '+');
+
+      if (isHidden) {
+        contents[index].classList.remove('hidden');
+        icons[index].textContent = '−';
+      }
+    }
+
+    function handleCateringSubmit(event) {
+      event.preventDefault();
+      document.getElementById('catSuccess').classList.remove('hidden');
+      setTimeout(() => {
+        closeModal('cateringModal');
+        document.getElementById('catSuccess').classList.add('hidden');
+        showToast('Gifting inquiry submitted successfully!');
+      }, 2000);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2600);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProductsGrid('all');
+      renderBundleSlots();
+      renderBundlePickerButtons();
+      updateCartUI();
+    });
+  </script>
+
+</body>
+</html>
