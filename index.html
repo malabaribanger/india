@@ -120,7 +120,10 @@
           </div>
         </div>
       </a>
-
+<a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+  <span>Curate Box</span>
+  <span class="bg-brand-crimson text-white text-[8px] px-1.5 py-0.5 rounded font-bold">Offer</span>
+</a>
       <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-semibold uppercase tracking-wider text-brand-cream/80" aria-label="Main Navigation">
         <a href="#products" class="hover:text-brand-gold transition-colors">Our 8 Canisters</a>
@@ -213,7 +216,10 @@
             <p class="text-xs sm:text-sm text-brand-charcoal/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
               Thin-sliced Wayanad raw Nendran bananas, batch-crisped in cold-pressed Kerala coconut oil and locked into airtight keepsake canisters. Authentic Malabar food culture made crisp, natural, and preservative-free.
             </p>
-
+<a href="#box-builder" class="bg-white border border-brand-forest/20 hover:border-brand-gold text-brand-forest text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full transition shadow-sm flex items-center gap-1.5">
+  <span>Curate Custom Box</span>
+  <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+</a>
             <!-- 3 Clean FMCG Value Pillars (Inspired by Nirapara Purity Seals) -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
               <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
@@ -451,7 +457,43 @@
         </div>
       </div>
     </section>
+<!-- Banger Box Builder Section -->
+<section class="py-14 sm:py-16 bg-gradient-to-b from-brand-cream to-brand-creamWarm border-b border-brand-sand" id="box-builder">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center justify-center gap-2 mb-2">
+        <span class="h-px w-8 bg-brand-gold"></span>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-forest font-bold">Custom Gifting & Bundles</span>
+        <span class="h-px w-8 bg-brand-gold"></span>
+      </div>
+      <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">Curate Your Custom Banger Box</h2>
+      <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-2 font-light max-w-xl mx-auto">
+        Select your box size, pick your favorite keepsake canisters, and send your custom bundle straight to WhatsApp.
+      </p>
+    </div>
 
+    <!-- Box Size Selector -->
+    <div class="flex justify-center gap-4 mb-8">
+      <button onclick="setBoxSize(3)" id="boxSize3Btn" class="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-gold bg-brand-gold text-brand-forest">
+        3-Tin Box (₹549)
+      </button>
+      <button onclick="setBoxSize(6)" id="boxSize6Btn" class="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-forest text-brand-forest hover:bg-brand-forest hover:text-brand-cream">
+        6-Tin Box (₹999)
+      </button>
+    </div>
+
+    <!-- Selected Box Slots Preview -->
+    <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-sm max-w-3xl mx-auto mb-8">
+      <h3 class="font-serif text-base font-bold text-brand-forest mb-4 text-center" id="boxTitle">Selected Tins (0 / 3)</h3>
+      <div id="boxSlotsContainer" class="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-6">
+        <!-- Slots rendered via JS -->
+      </div>
+      <button onclick="orderCustomBoxWhatsApp()" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-full text-xs uppercase tracking-widest transition flex items-center justify-center gap-2 shadow-md">
+        <span>Order Custom Box via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</section>
     <!-- Malabar Tea Table Pairings (Culinary Culture) -->
     <section class="py-16 bg-brand-creamWarm border-b border-brand-sand" id="pairings">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1541,13 +1583,94 @@ function checkoutViaWhatsApp() {
         toast.classList.add('translate-y-20', 'opacity-0');
       }, 2600);
     }
+let customBoxSize = 3;
+let customBoxItems = [];
 
-    window.addEventListener('DOMContentLoaded', () => {
-      renderProductsGrid('all');
-      renderBundleSlots();
-      renderBundlePickerButtons();
-      updateCartUI();
-    });
+function setBoxSize(size) {
+  customBoxSize = size;
+  customBoxItems = [];
+  
+  const btn3 = document.getElementById('boxSize3Btn');
+  const btn6 = document.getElementById('boxSize6Btn');
+  
+  if (size === 3) {
+    if (btn3) btn3.className = "px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-gold bg-brand-gold text-brand-forest";
+    if (btn6) btn6.className = "px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-forest text-brand-forest hover:bg-brand-forest hover:text-brand-cream";
+  } else {
+    if (btn6) btn6.className = "px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-gold bg-brand-gold text-brand-forest";
+    if (btn3) btn3.className = "px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition border-2 border-brand-forest text-brand-forest hover:bg-brand-forest hover:text-brand-cream";
+  }
+  updateBoxSlots();
+}
+
+function addToCustomBox(name) {
+  if (customBoxItems.length >= customBoxSize) {
+    alert(`Your ${customBoxSize}-tin box is full! Remove an item or switch to a bigger box.`);
+    return;
+  }
+  customBoxItems.push(name);
+  updateBoxSlots();
+}
+
+function removeFromCustomBox(index) {
+  customBoxItems.splice(index, 1);
+  updateBoxSlots();
+}
+
+function updateBoxSlots() {
+  const container = document.getElementById('boxSlotsContainer');
+  const title = document.getElementById('boxTitle');
+  if (!container || !title) return;
+
+  title.innerText = `Selected Tins (${customBoxItems.length} / ${customBoxSize})`;
+  
+  let html = '';
+  for (let i = 0; i < customBoxSize; i++) {
+    if (i < customBoxItems.length) {
+      html += `
+        <div class="relative bg-brand-forest text-brand-cream p-2.5 rounded-xl text-center text-[10px] font-bold border border-brand-gold flex flex-col justify-between h-20">
+          <span>${customBoxItems[i]}</span>
+          <button onclick="removeFromCustomBox(${i})" class="text-[9px] text-red-300 underline">Remove</button>
+        </div>
+      `;
+    } else {
+      html += `
+        <div class="border-2 border-dashed border-brand-sand rounded-xl h-20 flex items-center justify-center text-[10px] text-brand-charcoal/40 font-semibold">
+          Slot ${i + 1}
+        </div>
+      `;
+    }
+  }
+  container.innerHTML = html;
+}
+
+function orderCustomBoxWhatsApp() {
+  if (customBoxItems.length < customBoxSize) {
+    alert(`Please select ${customBoxSize} tins to complete your custom box before ordering.`);
+    return;
+  }
+
+  const price = customBoxSize === 3 ? 549 : 999;
+  let text = `📦 *CUSTOM ${customBoxSize}-TIN BANGER BOX ORDER*\n`;
+  text += "-----------------------------------\n\n";
+  text += "*Selected Flavour Canisters:*\n";
+  customBoxItems.forEach((item, idx) => {
+    text += `${idx + 1}. ${item}\n`;
+  });
+  text += "\n-----------------------------------\n";
+  text += `💰 *BOX TOTAL:* ₹${price}\n\n`;
+  text += "Please confirm my custom box order and share payment details!";
+
+  const whatsappUrl = `https://wa.me/919249539290?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank');
+}
+   window.addEventListener('DOMContentLoaded', () => {
+  renderProductsGrid('all');
+  renderBundleSlots();
+  renderBundlePickerButtons();
+  updateCartUI();
+  updateBoxSlots(); // 👈 Add this line here
+});
   </script>
 
 </body>
