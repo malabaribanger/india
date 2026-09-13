@@ -328,7 +328,27 @@
             Just like traditional Kerala kitchens, we never cut corners with palmolein or synthetic flavor enhancers. Pure agricultural treasure from Kerala soil.
           </p>
         </div>
-
+        <!-- Signature 8 Canisters Grid Section -->
+        <section class="py-14 sm:py-16 bg-brand-cream border-b border-brand-sand" id="products">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+              <div class="inline-flex items-center justify-center gap-2 mb-2">
+                <span class="h-px w-8 bg-brand-gold"></span>
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-forest font-bold">Signature Collection</span>
+                <span class="h-px w-8 bg-brand-gold"></span>
+              </div>
+              <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">The 8 Keepsake Canisters</h2>
+              <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-2 font-light max-w-xl mx-auto">
+                Batch-crisped in 100% pure coconut oil and sealed in airtight 200g keepsake tins.
+              </p>
+            </div>
+        
+            <!-- Product Grid Container -->
+            <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+        </section>
         <!-- 4 Agricultural & Culinary Heritage Pillars -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
@@ -1090,7 +1110,43 @@
       event.currentTarget.classList.add('bg-brand-forest', 'text-brand-cream', 'active', 'shadow-sm');
       renderProductsGrid(category);
     }
+function renderProducts() {
+  const container = document.getElementById('productsGrid');
+  if (!container || typeof PRODUCTS_DATA === 'undefined') return;
 
+  container.innerHTML = PRODUCTS_DATA.map(item => `
+    <div class="bg-white rounded-2xl border border-brand-sand p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+      <div>
+        <div class="w-full h-48 rounded-xl p-4 flex flex-col justify-between items-center text-white relative mb-4 border border-brand-gold/30" style="background: ${item.gradient || item.color}">
+          <div class="w-full flex justify-between text-[8px] uppercase tracking-widest text-brand-gold border-b border-brand-gold/20 pb-1">
+            <span>MALABAR</span>
+            <span>CALICUT</span>
+          </div>
+          <div class="text-center">
+            <h4 class="font-serif text-sm font-bold tracking-wide">${item.name.split('—')[0]}</h4>
+            <p class="text-[9px] text-brand-gold uppercase tracking-widest mt-0.5">${item.subtitle}</p>
+          </div>
+          <div class="text-[8px] italic text-brand-sand">${item.tagline}</div>
+        </div>
+        <h3 class="font-serif text-base font-bold text-brand-forest">${item.name}</h3>
+        <p class="text-xs text-brand-charcoal/70 mt-1 line-clamp-2">${item.desc}</p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-brand-sand flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold text-brand-forest">₹${item.price}</span>
+          <span class="text-[10px] text-brand-charcoal/50 line-through ml-1">₹${item.origPrice}</span>
+        </div>
+        <button onclick="addToCart('${item.id}')" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
+          + Add
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+});
     function switchHeroCanister(index) {
   const item = PRODUCTS_DATA[index];
   if (!item) return;
