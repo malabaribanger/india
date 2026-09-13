@@ -215,14 +215,14 @@
             </p>
 
             <!-- 3 Clean FMCG Value Pillars (Inspired by Nirapara Purity Seals) -->
-            <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
               <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">100% Pure Oil</span>
                 <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Cold-pressed copra</span>
               </div>
               <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">Wayanad GI Tag</span>
-                <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Raw Nendran harvest</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">Wayanad Harvest</span>
+                <span class="text-[10px] text-brand-charcoal/70 leading-tight block mt-0.5">Raw Nendran Bananas</span>
               </div>
               <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-brand-forest block">6-Month Crisp</span>
@@ -258,7 +258,7 @@
 
               <!-- Interactive Hero Canister Graphic -->
               <div class="my-5 flex flex-col items-center justify-center text-center">
-                <div id="heroCanisterVisual" class="w-44 h-64 rounded-2xl p-3.5 flex flex-col justify-between items-center shadow-md relative transition-all duration-500 border border-brand-gold/40 text-white" style="background: linear-gradient(145deg, #0E2B1F, #174834);">
+                <div id="heroCanisterVisual" class="w-full max-w-[180px] h-64 rounded-2xl p-3.5 flex flex-col justify-between items-center shadow-md relative transition-all duration-500 border border-brand-gold/40 text-white" style="background: linear-gradient(145deg, #0E2B1F, #174834);">
                   
                   <div class="w-full flex justify-between items-center text-[8px] uppercase tracking-widest text-brand-gold border-b border-brand-gold/20 pb-1">
                     <span>MALABAR</span>
@@ -361,7 +361,7 @@
             <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
               Harvested at exact raw starch density from hill-tract farms. Sliced paper-thin for quintessential Calicut shatter.
             </p>
-            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">GI-Tagged Harvest</span>
+            <span class="inline-block mt-3 text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">Farm-Fresh Harvest</span>
           </div>
 
           <div class="bg-brand-creamCard p-6 rounded-2xl border border-brand-sand shadow-sm hover:border-brand-gold transition duration-300">
@@ -1341,11 +1341,34 @@
       }
     }
 
-    function checkoutViaWhatsApp() {
-      if (cart.length === 0) {
-        showToast('Please add items to your cart first.');
-        return;
-      }
+    const WHATSAPP_NUMBER = "919249539290"; // Updated phone number (9249539290)
+
+function checkoutViaWhatsApp() {
+  if (cart.length === 0) {
+    alert("Your Banger Box is empty! Add some tins before ordering.");
+    return;
+  }
+
+  let text = "🛒 *NEW MALABARI BANGER ORDER*\n";
+  text += "-----------------------------------\n\n";
+
+  let total = 0;
+  cart.forEach((item, idx) => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+    text += `${idx + 1}. *${item.name}* (${item.subtitle})\n`;
+    text += `   Qty: ${item.quantity} x ₹${item.price} = ₹${itemTotal}\n\n`;
+  });
+
+  text += "-----------------------------------\n";
+  text += `💰 *TOTAL AMOUNT:* ₹${total}\n\n`;
+  text += "Please confirm my order and share payment options!";
+
+  const encodedText = encodeURIComponent(text);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+
+  window.open(whatsappUrl, '_blank');
+}
 
       let summary = "*MALABARI BANGER ORDER ENQUIRY*%0A";
       summary += "--------------------------------%0A";
@@ -1363,7 +1386,7 @@
       summary += "*Customer Name:* [PLEASE ENTER YOUR NAME]%0A%0A";
       summary += "Please confirm availability and dispatch schedule from Calicut!";
 
-      const whatsappUrl = `https://wa.me/919846000000?text=${summary}`;
+      const whatsappUrl = `https://wa.me/919249539290?text=${summary}`;
       window.open(whatsappUrl, '_blank');
     }
 
