@@ -1494,7 +1494,30 @@ function updateBoxButtons() {
   if (whatsappBtn) whatsappBtn.disabled = !isComplete;
   if (cartBtn) cartBtn.disabled = !isComplete;
 }
+// Add Custom Box item directly to Cart
+  function addBoxToCart() {
+    if (selectedBoxTins.length !== currentBoxSize) return;
 
+    const summaryMap = {};
+    selectedBoxTins.forEach(item => { summaryMap[item] = (summaryMap[item] || 0) + 1; });
+    const itemsBreakdown = Object.entries(summaryMap)
+      .map(([item, qty]) => `${qty}x ${item}`)
+      .join(', ');
+
+    const customBox = {
+      id: `custom-box-${Date.now()}`,
+      name: `${currentBoxSize}-Tin Custom Banger Box`,
+      details: itemsBreakdown,
+      price: currentBoxSize === 3 ? 549 : 999,
+      quantity: 1
+    };
+
+    if (typeof cart !== 'undefined') {
+      cart.push(customBox);
+      if (typeof updateCartUI === 'function') updateCartUI();
+      if (typeof toggleCartDrawer === 'function') toggleCartDrawer(true);
+    }
+  }
 // Add Custom Box item directly to Cart
 function addBoxToCart() {
   if (selectedBoxTins.length !== currentBoxSize) return;
