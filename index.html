@@ -334,27 +334,59 @@
             Just like traditional Kerala kitchens, we never cut corners with palmolein or synthetic flavor enhancers. Pure agricultural treasure from Kerala soil.
           </p>
         </div>
-        <!-- Signature 8 Canisters Grid Section -->
-        <section class="py-14 sm:py-16 bg-brand-cream border-b border-brand-sand" id="products">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-              <div class="inline-flex items-center justify-center gap-2 mb-2">
-                <span class="h-px w-8 bg-brand-gold"></span>
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-forest font-bold">Signature Collection</span>
-                <span class="h-px w-8 bg-brand-gold"></span>
-              </div>
-              <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">The 8 Keepsake Canisters</h2>
-              <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-2 font-light max-w-xl mx-auto">
-                Batch-crisped in 100% pure coconut oil and sealed in airtight 200g keepsake tins.
-              </p>
-            </div>
-        
-            <!-- Product Grid Container -->
-            <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <!-- Populated dynamically via JS -->
-            </div>
-          </div>
-        </section>
+        <!-- Custom Banger Box Builder Section -->
+  <section class="py-14 sm:py-16 bg-white border-b border-brand-sand" id="box-builder">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center justify-center gap-2 mb-2">
+        <span class="h-px w-8 bg-brand-gold"></span>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-forest font-bold">Custom Gifting & Bundles</span>
+        <span class="h-px w-8 bg-brand-gold"></span>
+      </div>
+      <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-forest tracking-tight">Curate Your Custom Banger Box</h2>
+      <p class="text-brand-charcoal/80 text-xs sm:text-sm mt-2 font-light max-w-xl mx-auto">
+        Select your box size, pick your favorite keepsake canisters, and send your custom bundle straight to WhatsApp or Add to Cart.
+      </p>
+
+      <!-- Box Size Toggles -->
+      <div class="flex justify-center gap-4 my-6">
+        <button id="box-3-btn" onclick="setBoxSize(3)" class="px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm">3-Tin Box (₹549)</button>
+        <button id="box-6-btn" onclick="setBoxSize(6)" class="px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm">6-Tin Box (₹999)</button>
+      </div>
+
+      <!-- Selection & Actions Container -->
+      <div class="bg-brand-creamCard p-6 rounded-3xl border border-brand-sand shadow-sm max-w-2xl mx-auto">
+        <p class="text-xs uppercase tracking-widest text-brand-forest font-bold mb-4">
+          Selected Tins (<span id="box-selected-count" class="text-brand-gold">0</span> / <span id="box-target-count">3</span>)
+        </p>
+
+        <!-- Product Selection Buttons -->
+        <div id="box-tin-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+          <button type="button" onclick="addTinToBox('Kerala Banana Chips Classic')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+            + Banana Chips Classic
+          </button>
+          <button type="button" onclick="addTinToBox('Jackfruit Crunch')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+            + Jackfruit Crunch
+          </button>
+          <button type="button" onclick="addTinToBox('Malabar Mixture')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+            + Malabar Mixture
+          </button>
+          <button type="button" onclick="addTinToBox('Achappam')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+            + Achappam
+          </button>
+        </div>
+
+        <!-- Action Buttons: WhatsApp & Add to Cart -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button id="whatsapp-box-btn" onclick="submitCustomBoxWhatsApp()" disabled class="flex-1 bg-emerald-700 disabled:bg-gray-300 disabled:text-gray-500 text-white py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition shadow disabled:cursor-not-allowed">
+            Order via WhatsApp
+          </button>
+          <button id="cart-box-btn" onclick="addBoxToCart()" disabled class="flex-1 bg-brand-forest disabled:bg-gray-300 disabled:text-gray-500 text-brand-cream py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition shadow disabled:cursor-not-allowed">
+            Add Box to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
         <!-- 4 Agricultural & Culinary Heritage Pillars -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
@@ -1438,7 +1470,79 @@ document.addEventListener('DOMContentLoaded', () => {
         drawer.classList.add('hidden');
       }
     }
+// Global State for Custom Box Builder
+let currentBoxSize = 3;
+let selectedBoxTins = [];
 
+// Switch box size (3 or 6)
+function setBoxSize(size) {
+  currentBoxSize = size;
+  selectedBoxTins = [];
+  
+  const targetCountEl = document.getElementById('box-target-count');
+  const selectedCountEl = document.getElementById('box-selected-count');
+  if (targetCountEl) targetCountEl.innerText = size;
+  if (selectedCountEl) selectedCountEl.innerText = 0;
+
+  const btn3 = document.getElementById('box-3-btn');
+  const btn6 = document.getElementById('box-6-btn');
+
+  if (btn3 && btn6) {
+    if (size === 3) {
+      btn3.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
+      btn6.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+    } else {
+      btn6.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
+      btn3.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+    }
+  }
+
+  updateBoxButtons();
+}
+
+// Add a tin to the custom box
+function addTinToBox(tinName) {
+  if (selectedBoxTins.length < currentBoxSize) {
+    selectedBoxTins.push(tinName);
+    const selectedCountEl = document.getElementById('box-selected-count');
+    if (selectedCountEl) selectedCountEl.innerText = selectedBoxTins.length;
+  } else {
+    alert(`Your ${currentBoxSize}-Tin Box is full! Change size or clear selections to add more.`);
+  }
+
+  updateBoxButtons();
+}
+
+// Enable/Disable checkout buttons based on box status
+function updateBoxButtons() {
+  const isComplete = selectedBoxTins.length === currentBoxSize;
+  
+  const whatsappBtn = document.getElementById('whatsapp-box-btn');
+  const cartBtn = document.getElementById('cart-box-btn');
+
+  if (whatsappBtn) whatsappBtn.disabled = !isComplete;
+  if (cartBtn) cartBtn.disabled = !isComplete;
+}
+
+// Add Custom Box item directly to Cart
+function addBoxToCart() {
+  if (selectedBoxTins.length !== currentBoxSize) return;
+
+  const customBox = {
+    id: `custom-box-${Date.now()}`,
+    name: `${currentBoxSize}-Tin Custom Banger Box`,
+    isBundle: true,
+    itemsList: selectedBoxTins.join(', '),
+    price: currentBoxSize === 3 ? 549 : 999,
+    quantity: 1
+  };
+
+  if (typeof cart !== 'undefined') {
+    cart.push(customBox);
+    if (typeof updateCartUI === 'function') updateCartUI();
+    if (typeof toggleCartDrawer === 'function') toggleCartDrawer(true);
+  }
+}
     const WHATSAPP_NUMBER = "919249539290"; // Updated phone number (9249539290)
 
 function checkoutViaWhatsApp() {
