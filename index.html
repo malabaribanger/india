@@ -353,31 +353,32 @@
         <button id="box-6-btn" onclick="setBoxSize(6)" class="px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm">6-Tin Box (₹999)</button>
       </div>
 
-      <!-- Selection & Actions Container -->
-      <div class="bg-brand-creamCard p-6 rounded-3xl border border-brand-sand shadow-sm max-w-2xl mx-auto">
-        <p class="text-xs uppercase tracking-widest text-brand-forest font-bold mb-4">
-          Selected Tins (<span id="box-selected-count" class="text-brand-gold">0</span> / <span id="box-target-count">3</span>)
-        </p>
-<div class="flex justify-between items-center mb-4">
-  <p class="text-xs uppercase tracking-widest text-brand-forest font-bold">
-    Selected Tins (<span id="box-selected-count" class="text-brand-gold">0</span> / <span id="box-target-count">3</span>)
-  </p>
-  <button type="button" onclick="resetBoxSelection()" class="text-xs text-red-600 hover:underline font-semibold">
-    Reset Selection
-  </button>
-</div>
-        <!-- Product Selection Buttons -->
+      <!-- Selection Status & Reset -->
+        <div class="flex justify-between items-center mb-4">
+          <p class="text-xs uppercase tracking-widest text-brand-forest font-bold">
+            Selected Tins (<span id="box-selected-count" class="text-brand-gold">0</span> / <span id="box-target-count">3</span>)
+          </p>
+          <button type="button" onclick="resetBoxSelection()" class="text-xs text-red-600 hover:underline font-semibold cursor-pointer">
+            Reset Selection
+          </button>
+        </div>
+
+        <!-- Interactive Product Selection Grid -->
         <div id="box-tin-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
-          <button type="button" onclick="addTinToBox('Kerala Banana Chips Classic')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+          <button type="button" data-tin="Kerala Banana Chips Classic" onclick="addTinToBox('Kerala Banana Chips Classic')" class="relative p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition cursor-pointer">
+            <span class="tin-badge hidden absolute -top-2 -right-2 bg-brand-gold text-brand-forest font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-white shadow"></span>
             + Banana Chips Classic
           </button>
-          <button type="button" onclick="addTinToBox('Jackfruit Crunch')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+          <button type="button" data-tin="Jackfruit Crunch" onclick="addTinToBox('Jackfruit Crunch')" class="relative p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition cursor-pointer">
+            <span class="tin-badge hidden absolute -top-2 -right-2 bg-brand-gold text-brand-forest font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-white shadow"></span>
             + Jackfruit Crunch
           </button>
-          <button type="button" onclick="addTinToBox('Malabar Mixture')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+          <button type="button" data-tin="Malabar Mixture" onclick="addTinToBox('Malabar Mixture')" class="relative p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition cursor-pointer">
+            <span class="tin-badge hidden absolute -top-2 -right-2 bg-brand-gold text-brand-forest font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-white shadow"></span>
             + Malabar Mixture
           </button>
-          <button type="button" onclick="addTinToBox('Achappam')" class="p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition">
+          <button type="button" data-tin="Achappam" onclick="addTinToBox('Achappam')" class="relative p-3 border border-brand-sand hover:border-brand-gold rounded-xl bg-white text-xs font-bold text-brand-forest transition cursor-pointer">
+            <span class="tin-badge hidden absolute -top-2 -right-2 bg-brand-gold text-brand-forest font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-white shadow"></span>
             + Achappam
           </button>
         </div>
@@ -1537,67 +1538,71 @@ function addBoxToCart() {
     if (typeof toggleCartDrawer === 'function') toggleCartDrawer(true);
   }
 }
-  // State management for Custom Box Builder
-let currentBoxSize = 3;
-let selectedBoxTins = [];
+// --- STATE MANAGEMENT FOR CUSTOM BOX BUILDER ---
+  let currentBoxSize = 3;
+  let selectedBoxTins = [];
 
-function setBoxSize(size) {
-  currentBoxSize = size;
-  selectedBoxTins = [];
-  
-  const targetCountEl = document.getElementById('box-target-count');
-  const selectedCountEl = document.getElementById('box-selected-count');
-  if (targetCountEl) targetCountEl.innerText = size;
-  if (selectedCountEl) selectedCountEl.innerText = 0;
+  function setBoxSize(size) {
+    currentBoxSize = size;
+    selectedBoxTins = [];
+    
+    const targetCountEl = document.getElementById('box-target-count');
+    if (targetCountEl) targetCountEl.innerText = size;
 
-  const btn3 = document.getElementById('box-3-btn');
-  const btn6 = document.getElementById('box-6-btn');
+    const btn3 = document.getElementById('box-3-btn');
+    const btn6 = document.getElementById('box-6-btn');
 
-  if (btn3 && btn6) {
-    if (size === 3) {
-      btn3.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
-      btn6.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+    if (btn3 && btn6) {
+      if (size === 3) {
+        btn3.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
+        btn6.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+      } else {
+        btn6.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
+        btn3.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+      }
+    }
+
+    updateBoxUI();
+  }
+
+  function addTinToBox(tinName) {
+    if (selectedBoxTins.length < currentBoxSize) {
+      selectedBoxTins.push(tinName);
+      updateBoxUI();
     } else {
-      btn6.className = "px-5 py-2 rounded-full border border-brand-gold bg-brand-gold text-brand-forest font-bold text-xs uppercase tracking-wider transition shadow-sm";
-      btn3.className = "px-5 py-2 rounded-full border border-brand-gold/40 bg-white text-brand-forest font-bold text-xs uppercase tracking-wider hover:border-brand-gold transition shadow-sm";
+      alert(`Your ${currentBoxSize}-Tin Box is full! Switch size or click Reset.`);
     }
   }
 
-  updateBoxButtons();
-}
+  function resetBoxSelection() {
+    selectedBoxTins = [];
+    updateBoxUI();
+  }
 
-function addTinToBox(tinName) {
-  if (selectedBoxTins.length < currentBoxSize) {
-    selectedBoxTins.push(tinName);
+  function updateBoxUI() {
     const selectedCountEl = document.getElementById('box-selected-count');
     if (selectedCountEl) selectedCountEl.innerText = selectedBoxTins.length;
-  } else {
-    alert(`Your ${currentBoxSize}-Tin Box is full! Change size or clear selections.`);
+
+    const counts = {};
+    selectedBoxTins.forEach(item => { counts[item] = (counts[item] || 0) + 1; });
+
+    document.querySelectorAll('#box-tin-grid [data-tin]').forEach(btn => {
+      const tin = btn.getAttribute('data-tin');
+      const badge = btn.querySelector('.tin-badge');
+      const count = counts[tin] || 0;
+      if (badge) {
+        badge.innerText = count > 0 ? `${count}x` : '';
+        badge.classList.toggle('hidden', count === 0);
+      }
+    });
+
+    const isComplete = selectedBoxTins.length === currentBoxSize;
+    const whatsappBtn = document.getElementById('whatsapp-box-btn');
+    const cartBtn = document.getElementById('cart-box-btn');
+
+    if (whatsappBtn) whatsappBtn.disabled = !isComplete;
+    if (cartBtn) cartBtn.disabled = !isComplete;
   }
-// Add a tin to the custom box
-function addTinToBox(tinName) { ... }
-
- // Reset box selections
-function resetBoxSelection() {
-selectedBoxTins = [];
-const selectedCountEl = document.getElementById('box-selected-count');
-if (selectedCountEl) selectedCountEl.innerText = 0;
-updateBoxButtons();
- }
- 
-// Enable/Disable checkout buttons
-function updateBoxButtons() { ... }
-  updateBoxButtons();
-}
-
-function updateBoxButtons() {
-  const isComplete = selectedBoxTins.length === currentBoxSize;
-  const whatsappBtn = document.getElementById('whatsapp-box-btn');
-  const cartBtn = document.getElementById('cart-box-btn');
-
-  if (whatsappBtn) whatsappBtn.disabled = !isComplete;
-  if (cartBtn) cartBtn.disabled = !isComplete;
-}
 
 function addBoxToCart() {
   if (selectedBoxTins.length !== currentBoxSize) return;
