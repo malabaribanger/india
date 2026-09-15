@@ -89,7 +89,7 @@
 
   <!-- Clean Header Navigation with Explicit Z-Index -->
 <header class="w-full max-w-full bg-brand-forest text-brand-cream sticky top-0 z-50 border-b border-brand-gold/20 shadow-md">
-  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4 w-full relative">
     
     <!-- Brand Logo -->
     <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 cursor-pointer" aria-label="Malabari Banger Home">
@@ -115,54 +115,55 @@
       </div>
     </a>
 
-    <!-- Desktop Links -->
-    <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-semibold uppercase tracking-wider text-brand-cream/80" aria-label="Main Navigation">
-      <a href="#products" class="hover:text-brand-gold transition-colors">Our 8 Canisters</a>
-      <a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+    <!-- Desktop Navigation Links (Always Visible on Laptop/Desktop) -->
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-[11px] xl:text-[12px] font-semibold uppercase tracking-wider text-brand-cream/90" aria-label="Main Navigation">
+      <a href="#products" class="hover:text-brand-gold transition-colors whitespace-nowrap">Our 8 Canisters</a>
+      <a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1 whitespace-nowrap">
         <span>Curate Box</span>
         <span class="bg-brand-crimson text-white text-[8px] px-1.5 py-0.5 rounded font-bold">Offer</span>
       </a>
-      <a href="#purity" class="hover:text-brand-gold transition-colors">Purity Standard</a>
-      <a href="#pairings" class="hover:text-brand-gold transition-colors">Tea Pairings</a>
-      <a href="#heritage" class="hover:text-brand-gold transition-colors">Calicut Roots</a>
-      <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
+      <a href="#purity" class="hover:text-brand-gold transition-colors whitespace-nowrap">Purity Standard</a>
+      <a href="#pairings" class="hover:text-brand-gold transition-colors whitespace-nowrap">Tea Pairings</a>
+      <a href="#heritage" class="hover:text-brand-gold transition-colors whitespace-nowrap">Calicut Roots</a>
+      <a href="#faq" class="hover:text-brand-gold transition-colors whitespace-nowrap">FAQ</a>
     </nav>
 
-    <!-- Header Actions -->
+    <!-- Right Header Action Pill & Mobile Hamburger -->
     <div class="flex items-center gap-2 shrink-0">
-      <button type="button" id="cartToggleBtn" onclick="toggleCartDrawer(true)" class="cursor-pointer bg-brand-forestDark hover:bg-brand-forestDark/80 text-brand-cream border border-brand-gold/30 px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-full flex items-center gap-1.5 transition shadow-sm active:scale-95" aria-label="Open shopping cart">
+      <button type="button" id="cartToggleBtn" onclick="toggleCartDrawer(true)" class="cursor-pointer bg-brand-forestDark hover:bg-brand-forestDark/80 text-brand-cream border border-brand-gold/30 px-3 py-1.5 rounded-full flex items-center gap-1.5 transition shadow-sm active:scale-95" aria-label="Open shopping cart">
         <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
         </svg>
-        <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider">Box</span>
+        <span class="text-[10px] uppercase font-bold tracking-wider">Box</span>
         <span id="cartCountBadge" class="bg-brand-gold text-brand-forest font-black text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
       </button>
 
-      <!-- Fully Interactive Hamburger Button -->
-      <button type="button" id="mobileMenuBtn" onclick="toggleMobileNav(event)" class="lg:hidden cursor-pointer relative z-50 w-9 h-9 flex items-center justify-center rounded-lg border border-brand-gold/40 text-brand-gold bg-brand-forestDark hover:bg-brand-forestMedium focus:outline-none transition active:scale-95 shrink-0" aria-label="Toggle navigation menu">
-        <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Mobile Menu Hamburger (Hidden on Laptop/Desktop) -->
+      <button type="button" id="mobileMenuBtn" onclick="toggleMobileNav(event)" class="lg:hidden cursor-pointer relative z-50 w-8 h-8 flex items-center justify-center rounded-lg border border-brand-gold/40 text-brand-gold bg-brand-forestDark hover:bg-brand-forestMedium focus:outline-none transition active:scale-95 shrink-0" aria-label="Toggle navigation menu">
+        <svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
-  </div>
 
-  <!-- Mobile Dropdown Drawer -->
-  <div id="mobileMenu" class="hidden lg:hidden w-full bg-brand-forestDark border-t border-brand-gold/20 px-6 py-4 space-y-3 relative z-40 shadow-xl">
-    <a href="#products" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">The 8 Canisters Collection</a>
-    <a href="#box-builder" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-gold py-1">Curate Custom Box (3 or 6 Tins)</a>
-    <a href="#purity" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">100% Coconut Oil & Purity</a>
-    <a href="#pairings" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Malabar Tea Pairings</a>
-    <a href="#heritage" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Calicut Heritage & Roots</a>
-    <a href="#faq" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">FAQ</a>
-    <div class="pt-2 border-t border-brand-gold/20">
-      <button type="button" onclick="openModal('cateringModal'); toggleMobileNav();" class="cursor-pointer w-full text-center py-2.5 bg-brand-gold hover:bg-brand-goldHover text-brand-forest rounded-full text-xs uppercase tracking-widest font-bold transition">
-        Weddings & Gifting Enquiries
-      </button>
+    <!-- Mobile Dropdown Drawer (Floating, Completely Hidden on Desktop) -->
+    <div id="mobileMenu" class="hidden lg:hidden w-full bg-brand-forestDark border-t border-brand-gold/20 px-6 py-4 space-y-3 absolute top-full left-0 z-50 shadow-2xl">
+      <a href="#products" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">The 8 Canisters Collection</a>
+      <a href="#box-builder" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-gold py-1">Curate Custom Box (3 or 6 Tins)</a>
+      <a href="#purity" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">100% Coconut Oil & Purity</a>
+      <a href="#pairings" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Malabar Tea Pairings</a>
+      <a href="#heritage" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Calicut Heritage & Roots</a>
+      <a href="#faq" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">FAQ</a>
+      <div class="pt-2 border-t border-brand-gold/20">
+        <button type="button" onclick="openModal('cateringModal'); toggleMobileNav();" class="cursor-pointer w-full text-center py-2.5 bg-brand-gold hover:bg-brand-goldHover text-brand-forest rounded-full text-xs uppercase tracking-widest font-bold transition">
+          Weddings & Gifting Enquiries
+        </button>
+      </div>
     </div>
+
   </div>
 </header>
-
+  
   <main>
     <!-- Fresh, Natural Hero Section -->
     <section class="relative bg-gradient-to-b from-brand-creamLight via-brand-cream to-brand-creamWarm border-b border-brand-sand pt-6 pb-12 sm:pt-8 sm:pb-14 lg:py-16 overflow-hidden">
