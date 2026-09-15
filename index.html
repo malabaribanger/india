@@ -69,27 +69,23 @@
 </head>
 <body class="bg-brand-cream text-brand-charcoal font-sans selection:bg-brand-gold selection:text-brand-forest antialiased">
   <!-- Clean, Non-overlapping Top Utility Bar -->
-  <aside aria-label="Brand Guarantee" class="w-full bg-brand-forestDark text-brand-cream text-[11px] border-b border-brand-gold/20 py-2.5 px-4 sm:px-6 relative z-30">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-      
-      <!-- Left: Regional Provenance -->
-      <div class="flex items-center gap-2 min-w-0">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse"></span>
-        <span class="font-malayalam text-[11px] text-brand-gold font-bold shrink-0">നാടൻ രുചി</span>
-        <span class="text-brand-cream/80 truncate text-[10px] sm:text-[11px]">• 100% PURE KERALA COCONUT OIL • BATCH-FRIED IN CALICUT</span>
+    <aside aria-label="Brand Guarantee" class="w-full bg-brand-forestDark text-brand-cream text-[10px] sm:text-[11px] border-b border-brand-gold/20 py-2 px-3 sm:px-6 relative z-30">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <!-- Left: Regional Provenance -->
+        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse"></span>
+          <span class="font-malayalam text-[10px] sm:text-[11px] text-brand-gold font-bold shrink-0">നാടൻ രുചി</span>
+          <span class="text-brand-cream/80 truncate text-[9px] sm:text-[11px]">• 100% PURE KERALA COCONUT OIL</span>
+        </div>
+        <!-- Right: Commercial Link -->
+        <div class="flex items-center gap-2 shrink-0 text-[9px] sm:text-[11px] text-brand-cream/85">
+          <button type="button" onclick="openModal('cateringModal')" class="cursor-pointer text-brand-gold hover:text-white transition font-medium flex items-center gap-1">
+            <span>Weddings & Enquiries</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
       </div>
-
-      <!-- Right: Commercial & Gifting Links -->
-      <div class="flex items-center gap-3 shrink-0 text-[10px] sm:text-[11px] text-brand-cream/85">
-        <span class="hidden md:inline text-brand-cream/70">Free Pan-India Delivery on 3+ Tins</span>
-        <button type="button" onclick="openModal('cateringModal')" class="cursor-pointer text-brand-gold hover:text-white transition font-medium flex items-center gap-1">
-          <span>Weddings & Corporate Favours</span>
-          <span>&rarr;</span>
-        </button>
-      </div>
-
-    </div>
-  </aside>
+    </aside>
 
   <!-- Clean Header Navigation -->
   <header class="w-full bg-brand-forest text-brand-cream sticky top-0 z-40 border-b border-brand-gold/20 shadow-md">
@@ -179,10 +175,9 @@
 
   <main>
     <!-- Fresh, Natural Hero Section -->
-    <section class="relative bg-gradient-to-b from-brand-creamLight via-brand-cream to-brand-creamWarm border-b border-brand-sand pt-8 pb-14 lg:py-16 overflow-hidden">
-      
-      <!-- Subtle Decorative Woodcut Palm Vector in Background -->
-      <div class="absolute -right-16 -top-10 opacity-[0.06] pointer-events-none w-96 h-96">
+    <section class="relative bg-gradient-to-b from-brand-creamLight via-brand-cream to-brand-creamWarm border-b border-brand-sand pt-6 pb-12 sm:pt-8 sm:pb-14 lg:py-16 overflow-hidden">
+      <!-- Decorative Background Vector (Hidden on small screens to prevent overflow) -->
+      <div class="hidden sm:block absolute -right-16 -top-10 opacity-[0.06] pointer-events-none w-72 sm:w-96 h-72 sm:h-96">
         <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-forest">
           <path d="M48 94 L52 94 L51 45 C51 45 61 48 69 44 C77 40 79 30 79 30 C79 30 71 32 65 36 C59 40 51 43 51 43 C51 43 57 36 67 31 C77 26 81 15 81 15 C81 15 71 17 63 23 C55 29 50 39 50 39 C50 39 49 28 54 20 C59 12 55 2 55 2 C55 2 48 8 46 16 C44 24 49 39 49 39 C49 39 45 28 39 21 C33 14 22 13 22 13 C22 13 26 23 34 29 C42 35 48 42 48 42 C48 42 41 38 33 34 C25 30 17 31 17 31 C17 31 22 40 31 43 C40 46 48 44 48 44 Z" />
         </svg>
@@ -190,27 +185,26 @@
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <!-- Hero Narrative -->
-        <div class="space-y-5">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-forest/5 border border-brand-forest/15 text-brand-forest text-xs font-semibold">
-            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
-            <span>Traditional Flavours. Bolder Tomorrows.</span>
+        <div class="space-y-4 sm:space-y-5">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-brand-forest/5 border border-brand-forest/15 text-brand-forest text-[11px] sm:text-xs font-semibold max-w-full">
+            <span class="w-2 h-2 rounded-full bg-brand-gold shrink-0"></span>
+            <span class="truncate">Traditional Flavours. Bolder Tomorrows.</span>
           </div>
 
-          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-brand-forest">
+          <h1 class="font-serif text-2xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-brand-forest">
             THE GOLDEN CRUNCH OF CALICUT. <br />
             <span class="italic font-normal text-brand-gold">SEALED FOR THE WORLD.</span>
           </h1>
 
-          <div class="flex items-center justify-center gap-2 text-brand-forest/80 text-xs font-malayalam">
+          <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-brand-forest/80 text-[11px] sm:text-xs font-malayalam">
             <span class="font-bold">കോഴിക്കോടൻ തനത് രുചി</span>
-            <span>•</span>
-            <span class="font-sans text-[11px] uppercase tracking-widest text-brand-charcoal/70">Wayanad Nendran • Cold-Pressed Copra Oil</span>
+            <span class="hidden xs:inline">•</span>
+            <span class="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-brand-charcoal/70">Wayanad Nendran • Cold-Pressed Copra Oil</span>
           </div>
 
-          <p class="text-xs sm:text-sm text-brand-charcoal/80 max-w-2xl mx-auto font-light leading-relaxed">
+          <p class="text-xs sm:text-sm text-brand-charcoal/80 max-w-2xl mx-auto font-light leading-relaxed px-2">
             Thin-sliced Wayanad raw Nendran bananas, batch-crisped in cold-pressed Kerala coconut oil and locked into airtight keepsake canisters. Authentic Malabar food culture made crisp, natural, and preservative-free.
           </p>
-
           <!-- 3 Clean Value Pillars -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 max-w-2xl mx-auto text-left">
             <div class="p-3 rounded-xl bg-white border border-brand-sand shadow-sm text-center">
@@ -228,11 +222,11 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex flex-row items-center justify-center gap-3 pt-4">
-            <a href="#products" class="bg-brand-forest hover:bg-brand-forestMedium text-brand-cream font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full shadow transition text-center">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 pt-2 sm:pt-4 w-full max-w-xs sm:max-w-none mx-auto">
+            <a href="#products" class="w-full sm:w-auto bg-brand-forest hover:bg-brand-forestMedium text-brand-cream font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full shadow transition text-center">
               View 8 Canisters
             </a>
-            <a href="#box-builder" class="bg-white border border-brand-forest/20 hover:border-brand-gold text-brand-forest text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full transition shadow-sm flex items-center gap-1.5">
+            <a href="#box-builder" class="w-full sm:w-auto bg-white border border-brand-forest/20 hover:border-brand-gold text-brand-forest text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full transition shadow-sm flex items-center justify-center gap-1.5">
               <span>Curate Custom Box</span>
               <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -241,6 +235,7 @@
           </div>
         </div>
       </div>
+    </section>
 
     <!-- The Malabar Purity Standard -->
     <section class="py-14 sm:py-16 bg-white border-b border-brand-sand" id="purity">
