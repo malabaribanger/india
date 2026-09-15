@@ -87,83 +87,81 @@
       </div>
     </aside>
 
-  <!-- Clean Header Navigation -->
-  <header class="w-full max-w-full bg-brand-forest text-brand-cream sticky top-0 z-40 border-b border-brand-gold/20 shadow-md overflow-hidden">
-  <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-1.5 sm:gap-4 w-full">
-      
-      <!-- Verified Brand Logo with Kerala Coconut Palm Emblem -->
-      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 cursor-pointer" aria-label="Malabari Banger Home">
-        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-brand-forestDark flex items-center justify-center border border-brand-gold/40 group-hover:border-brand-gold transition shadow-sm shrink-0">
-          <!-- Precise Malabar Coconut Palm Vector -->
-          <svg viewBox="0 0 60 60" class="w-5 h-5 sm:w-6 sm:h-6 fill-brand-gold" aria-hidden="true">
-            <path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/>
-            <path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5-18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0-18 4-22 11-7 0-14 1-18 6"/>
-          </svg>
+  <!-- Clean Header Navigation with Explicit Z-Index -->
+<header class="w-full max-w-full bg-brand-forest text-brand-cream sticky top-0 z-50 border-b border-brand-gold/20 shadow-md">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 w-full">
+    
+    <!-- Brand Logo -->
+    <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 cursor-pointer" aria-label="Malabari Banger Home">
+      <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-brand-forestDark flex items-center justify-center border border-brand-gold/40 group-hover:border-brand-gold transition shadow-sm shrink-0">
+        <svg viewBox="0 0 60 60" class="w-5 h-5 sm:w-6 sm:h-6 fill-brand-gold" aria-hidden="true">
+          <path d="M28.5 56h3l-.5-30c.8-.5 1-1.2 0-1.8l-.5-2.2c0-.5-.5-1-1-1s-1 .5-1 1l-.5 2.2c-1 .6-.8 1.3 0 1.8l-.5 30z"/>
+          <path d="M30 20c-2-8-8-12-16-11 5 3 9 7 11 11m5-11c-6-6-15-7-21-3 7 4 12 7 15 12m7-8c-9-3-18-2-24 4 8 2 14 5-18 10m7-5c-9 0-18 4-22 11 7 0 14 1 18 6m5-2c8-8 14-12 22-11-5 3-9 7-11 11m-6-11c6-6 15-7 21-3-7 4-12 7-15 12m-7-8c9-3 18-2 24 4-8 2-14 5-18 10m-7-5c9 0-18 4-22 11-7 0-14 1-18 6"/>
+        </svg>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div class="flex items-center gap-1 leading-none">
+          <span class="font-serif text-base sm:text-xl font-bold tracking-wider text-white">
+            MALABARI <span class="text-brand-gold">BANGER</span>
+          </span>
+          <span class="text-[8px] sm:text-[9px] font-sans font-bold text-brand-gold/80">TM</span>
         </div>
+        <div class="flex items-center gap-1.5 mt-1">
+          <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-brand-sand/80 font-sans font-semibold leading-none">
+            Snacks That Hit Different
+          </span>
+          <span class="hidden sm:inline text-brand-gold text-[7px] leading-none">• CALICUT</span>
+        </div>
+      </div>
+    </a>
 
-        <div class="flex flex-col justify-center">
-          <div class="flex items-center gap-1 leading-none">
-            <span class="font-serif text-base sm:text-xl font-bold tracking-wider text-white">
-              MALABARI <span class="text-brand-gold">BANGER</span>
-            </span>
-            <span class="text-[8px] sm:text-[9px] font-sans font-bold text-brand-gold/80">TM</span>
-          </div>
-          <div class="flex items-center gap-1.5 mt-1">
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-brand-sand/80 font-sans font-semibold leading-none">
-              Snacks That Hit Different
-            </span>
-            <span class="hidden sm:inline text-brand-gold text-[7px] leading-none">• CALICUT</span>
-          </div>
-        </div>
+    <!-- Desktop Links -->
+    <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-semibold uppercase tracking-wider text-brand-cream/80" aria-label="Main Navigation">
+      <a href="#products" class="hover:text-brand-gold transition-colors">Our 8 Canisters</a>
+      <a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+        <span>Curate Box</span>
+        <span class="bg-brand-crimson text-white text-[8px] px-1.5 py-0.5 rounded font-bold">Offer</span>
       </a>
+      <a href="#purity" class="hover:text-brand-gold transition-colors">Purity Standard</a>
+      <a href="#pairings" class="hover:text-brand-gold transition-colors">Tea Pairings</a>
+      <a href="#heritage" class="hover:text-brand-gold transition-colors">Calicut Roots</a>
+      <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
+    </nav>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-semibold uppercase tracking-wider text-brand-cream/80" aria-label="Main Navigation">
-        <a href="#products" class="hover:text-brand-gold transition-colors">Our 8 Canisters</a>
-        <a href="#box-builder" class="hover:text-brand-gold transition-colors flex items-center gap-1">
-          <span>Curate Box</span>
-          <span class="bg-brand-crimson text-white text-[8px] px-1.5 py-0.5 rounded font-bold">Offer</span>
-        </a>
-        <a href="#purity" class="hover:text-brand-gold transition-colors">Purity Standard</a>
-        <a href="#pairings" class="hover:text-brand-gold transition-colors">Tea Pairings</a>
-        <a href="#heritage" class="hover:text-brand-gold transition-colors">Calicut Roots</a>
-        <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
-      </nav>
+    <!-- Header Actions -->
+    <div class="flex items-center gap-2 shrink-0">
+      <button type="button" id="cartToggleBtn" onclick="toggleCartDrawer(true)" class="cursor-pointer bg-brand-forestDark hover:bg-brand-forestDark/80 text-brand-cream border border-brand-gold/30 px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-full flex items-center gap-1.5 transition shadow-sm active:scale-95" aria-label="Open shopping cart">
+        <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider">Box</span>
+        <span id="cartCountBadge" class="bg-brand-gold text-brand-forest font-black text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
 
-      <!-- Compact Action Pill & Mobile Hamburger Menu -->
-      <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
-        <!-- Compact Banger Box Cart Button -->
-        <button type="button" id="cartToggleBtn" onclick="toggleCartDrawer(true)" class="cursor-pointer bg-brand-forestDark hover:bg-brand-forestDark/80 text-brand-cream border border-brand-gold/30 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full flex items-center gap-1 sm:gap-1.5 transition group shadow-sm active:scale-95" aria-label="Open shopping cart">
-          <svg class="w-3.5 h-3.5 text-brand-gold group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-          </svg>
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider">Box</span>
-          <span id="cartCountBadge" class="bg-brand-gold text-brand-forest font-black text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
-        </button>
-
-        <!-- Compact Professional Mobile Menu Button -->
-        <button type="button" id="mobileMenuBtn" onclick="toggleMobileNav()" class="cursor-pointer lg:hidden w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-lg border border-brand-gold/40 text-brand-gold bg-brand-forestDark hover:bg-brand-forestMedium focus:outline-none focus:ring-1 focus:ring-brand-gold transition active:scale-95 shrink-0" aria-label="Toggle navigation menu">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
-    <!-- Mobile Drawer Navigation -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-brand-forestDark border-t border-brand-gold/20 px-6 py-4 space-y-3">
-      <a href="#products" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">The 8 Canisters Collection</a>
-      <a href="#box-builder" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-gold">Curate Custom Box (3 or 6 Tins)</a>
-      <a href="#purity" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">100% Coconut Oil & Purity</a>
-      <a href="#pairings" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">Malabar Tea Pairings</a>
-      <a href="#heritage" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">Calicut Heritage & Roots</a>
-      <a href="#faq" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold">FAQ</a>
-      <div class="pt-2 border-t border-brand-gold/20">
-        <button type="button" onclick="openModal('cateringModal'); toggleMobileNav();" class="cursor-pointer w-full text-center py-2.5 bg-brand-gold hover:bg-brand-goldHover text-brand-forest rounded-full text-xs uppercase tracking-widest font-bold transition">
-          Weddings & Gifting Enquiries
-        </button>
-      </div>
+      <!-- Fully Interactive Hamburger Button -->
+      <button type="button" id="mobileMenuBtn" onclick="toggleMobileNav(event)" class="lg:hidden cursor-pointer relative z-50 w-9 h-9 flex items-center justify-center rounded-lg border border-brand-gold/40 text-brand-gold bg-brand-forestDark hover:bg-brand-forestMedium focus:outline-none transition active:scale-95 shrink-0" aria-label="Toggle navigation menu">
+        <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div id="mobileMenu" class="hidden lg:hidden w-full bg-brand-forestDark border-t border-brand-gold/20 px-6 py-4 space-y-3 relative z-40 shadow-xl">
+    <a href="#products" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">The 8 Canisters Collection</a>
+    <a href="#box-builder" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-gold py-1">Curate Custom Box (3 or 6 Tins)</a>
+    <a href="#purity" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">100% Coconut Oil & Purity</a>
+    <a href="#pairings" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Malabar Tea Pairings</a>
+    <a href="#heritage" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">Calicut Heritage & Roots</a>
+    <a href="#faq" onclick="toggleMobileNav()" class="block text-xs font-semibold text-brand-cream hover:text-brand-gold py-1">FAQ</a>
+    <div class="pt-2 border-t border-brand-gold/20">
+      <button type="button" onclick="openModal('cateringModal'); toggleMobileNav();" class="cursor-pointer w-full text-center py-2.5 bg-brand-gold hover:bg-brand-goldHover text-brand-forest rounded-full text-xs uppercase tracking-widest font-bold transition">
+        Weddings & Gifting Enquiries
+      </button>
+    </div>
+  </div>
+</header>
 
   <main>
     <!-- Fresh, Natural Hero Section -->
@@ -1436,12 +1434,14 @@
       }
     }
 
-    function toggleMobileNav() {
-      const menu = document.getElementById('mobileMenu');
-      if (menu) {
-        menu.classList.toggle('hidden');
-      }
-    }
+    // Toggle Mobile Navigation Menu
+function toggleMobileNav(e) {
+  if (e) e.stopPropagation();
+  const menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('hidden');
+  }
+}
 
     function handleCateringSubmit(e) {
       e.preventDefault();
